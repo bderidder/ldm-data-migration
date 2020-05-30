@@ -1,0 +1,50 @@
+using System.Linq;
+using LaDanse.Source;
+using LaDanse.Target;
+using LaDanse.Target.Entities.GameData.Sync;
+using Migration.KeyMappers.GameData.Characters;
+using Migration.KeyMappers.GameData.Core;
+using Migration.KeyMappers.GameData.Sync;
+
+namespace Migration.Migrations.GameData.Sync
+{
+    public class TrackedByMigration : BaseMigration
+    {
+        private readonly TrackedByKeyMapper _trackedByKeyMapper;
+        private readonly GameCharacterKeyMapper _gameCharacterKeyMapper;
+        private readonly GameCharacterSourceKeyMapper _gameCharacterSourceKeyMapper;
+        
+        public TrackedByMigration(
+            SourceDbContext sourceDbContext, TargetDbContext targetDbContext, 
+            TrackedByKeyMapper trackedByKeyMapper, 
+            GameCharacterSourceKeyMapper gameCharacterSourceKeyMapper, 
+            GameCharacterKeyMapper gameCharacterKeyMapper)
+            : base(sourceDbContext, targetDbContext)
+        {
+            _trackedByKeyMapper = trackedByKeyMapper;
+            _gameCharacterSourceKeyMapper = gameCharacterSourceKeyMapper;
+            _gameCharacterKeyMapper = gameCharacterKeyMapper;
+        }
+        
+        public override void Migrate()
+        {
+            var trackedBys = SourceDbContext.TrackedBys.ToList();
+
+            foreach (var trackedBy in trackedBys)
+            {
+                var newEntity = new TrackedBy()
+                {
+                    Id = _trackedByKeyMapper.MapKey(trackedBy.Id),
+                    FromTime = trackedBy.FromTime,
+                    EndTime = trackedBy.EndTime,
+                    GameCharacterId = _gameCharacterKeyMapper.MapKey(trackedBy.CharacterId), 
+                    GameCharacterSourceId = _gameCharacterSourceKeyMapper.MapKey(trackedBy.CharacterSourceId)
+                };
+
+                TargetDbContext.TrackedBys.Add(newEntity);
+            }
+
+            TargetDbContext.SaveChanges();
+        }
+    }
+}

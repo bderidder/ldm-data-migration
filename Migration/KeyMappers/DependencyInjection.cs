@@ -2,6 +2,7 @@
 using Migration.KeyMappers.CharacterClaims;
 using Migration.KeyMappers.GameData.Characters;
 using Migration.KeyMappers.GameData.Core;
+using Migration.KeyMappers.GameData.Sync;
 using Migration.KeyMappers.Identity;
 using Migration.KeyMappers.Telemetry;
 
@@ -42,6 +43,12 @@ namespace Migration.KeyMappers
             services.AddScoped<InGameGuildKeyMapper>();
             services.AddScoped<GameCharacterKeyMapper>();
             services.AddScoped<GameCharacterVersionKeyMapper>();
+            
+            services.AddScoped<GameCharacterSourceKeyMapper>();
+            services.AddScoped<GameCharacterSyncSessionKeyMapper>();
+            services.AddScoped<TrackedByKeyMapper>();
+            services.AddScoped<ProfileSyncKeyMapper>();
+            services.AddScoped<GameGuildSyncKeyMapper>();
 
             #endregion
 

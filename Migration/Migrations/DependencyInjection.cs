@@ -3,6 +3,9 @@ using Migration.Migrations.CharacterClaims;
 using Migration.Migrations.GameData;
 using Migration.Migrations.GameData.Characters;
 using Migration.Migrations.GameData.Core;
+using Migration.Migrations.GameData.Sync;
+using Migration.Migrations.GameData.Sync.Guild;
+using Migration.Migrations.GameData.Sync.Profile;
 using Migration.Migrations.Identity;
 using Migration.Migrations.Telemetry;
 
@@ -51,12 +54,17 @@ namespace Migration.Migrations
             services.AddScoped<GameGuildMigration>();
             services.AddScoped<InGameGuildMigration>();
             
+            services.AddScoped<AllSyncMigrations>();
+            services.AddScoped<GameCharacterSyncSessionMigration>();
+            services.AddScoped<TrackedByMigration>();
+            services.AddScoped<ProfileSyncMigration>();
+            services.AddScoped<GameGuildSyncMigration>();
+            
             #endregion
             
             #region Identity
             
             services.AddScoped<IdentityMigrations>();
-            
             services.AddScoped<UserMigration>();
 
             #endregion
@@ -72,7 +80,6 @@ namespace Migration.Migrations
             #region Telemetry
             
             services.AddScoped<TelemetryMigrations>();
-            
             services.AddScoped<FeedbackMigration>();
 
             #endregion
