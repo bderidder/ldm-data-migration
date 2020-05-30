@@ -1,28 +1,33 @@
+using Microsoft.EntityFrameworkCore.Query;
 using Migration.Migrations.CharacterClaims;
 
 namespace Migration.Migrations.GameData.Characters
 {
     public class AllCharactersMigrations : IMigration
     {
-        private readonly GameCharacterClaimMigration _gameCharacterClaimMigration;
-        private readonly GameCharacterClaimVersionMigration _gameCharacterClaimVersionMigration;
-        private readonly PlaysGameRoleMigration _playsGameRoleMigration;
+        private readonly GameGuildMigration _gameGuildMigration;
+        private readonly GameCharacterMigration _gameCharacterMigration;
+        private readonly GameCharacterVersionMigration _gameCharacterVersionMigration;
+        private readonly InGameGuildMigration _inGameGuildMigration;
         
         public AllCharactersMigrations(
-            GameCharacterClaimMigration gameCharacterClaimMigration,
-            GameCharacterClaimVersionMigration gameCharacterClaimVersionMigration,
-            PlaysGameRoleMigration playsGameRoleMigration)
+            GameGuildMigration gameGuildMigration, 
+            GameCharacterMigration gameCharacterMigration, 
+            GameCharacterVersionMigration gameCharacterVersionMigration, 
+            InGameGuildMigration inGameGuildMigration)
         {
-            _gameCharacterClaimMigration = gameCharacterClaimMigration;
-            _gameCharacterClaimVersionMigration = gameCharacterClaimVersionMigration;
-            _playsGameRoleMigration = playsGameRoleMigration;
+            _gameCharacterMigration = gameCharacterMigration;
+            _gameCharacterVersionMigration = gameCharacterVersionMigration;
+            _gameGuildMigration = gameGuildMigration;
+            _inGameGuildMigration = inGameGuildMigration;
         }
         
         public void Migrate()
         {
-            _gameCharacterClaimMigration.Migrate();
-            _gameCharacterClaimVersionMigration.Migrate();
-            _playsGameRoleMigration.Migrate();
+            _gameGuildMigration.Migrate();
+            _gameCharacterMigration.Migrate();
+            _gameCharacterVersionMigration.Migrate();
+            _inGameGuildMigration.Migrate();
         }
     }
 }

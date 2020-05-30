@@ -1,5 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Migration.Migrations.CharacterClaims;
+using Migration.Migrations.GameData;
+using Migration.Migrations.GameData.Characters;
+using Migration.Migrations.GameData.Core;
 using Migration.Migrations.Identity;
 using Migration.Migrations.Telemetry;
 
@@ -33,7 +36,21 @@ namespace Migration.Migrations
             #endregion
             
             #region GameData
-
+            
+            services.AddScoped<AllGameDataMigrations>();
+            
+            services.AddScoped<AllCoreMigrations>();
+            services.AddScoped<GameClassMigration>();
+            services.AddScoped<GameFactionMigration>();
+            services.AddScoped<GameRaceMigration>();
+            services.AddScoped<GameRealmMigration>();
+            
+            services.AddScoped<AllCharactersMigrations>();
+            services.AddScoped<GameCharacterMigration>();
+            services.AddScoped<GameCharacterVersionMigration>();
+            services.AddScoped<GameGuildMigration>();
+            services.AddScoped<InGameGuildMigration>();
+            
             #endregion
             
             #region Identity
