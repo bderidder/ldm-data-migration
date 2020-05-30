@@ -57,7 +57,7 @@ namespace LaDanse.Source
 
         #region GameData
         
-        public virtual DbSet<GameClass> GameClasss { get; set; }
+        public virtual DbSet<GameClass> GameClasses { get; set; }
         public virtual DbSet<GameFaction> GameFactions { get; set; }
         public virtual DbSet<GameRace> GameRaces { get; set; }
         public virtual DbSet<GameRealm> Realms { get; set; }
