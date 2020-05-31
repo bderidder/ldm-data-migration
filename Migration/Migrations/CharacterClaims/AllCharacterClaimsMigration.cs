@@ -4,23 +4,23 @@ namespace Migration.Migrations.CharacterClaims
     {
         private readonly GameCharacterClaimMigration _gameCharacterClaimMigration;
         private readonly GameCharacterClaimVersionMigration _gameCharacterClaimVersionMigration;
-        private readonly PlaysGameRoleMigration _playsGameRoleMigratio;
+        private readonly PlaysGameRoleMigration _playsGameRoleMigration;
         
         public AllCharacterClaimsMigration(
             GameCharacterClaimMigration gameCharacterClaimMigration,
             GameCharacterClaimVersionMigration gameCharacterClaimVersionMigration,
-            PlaysGameRoleMigration playsGameRoleMigration, PlaysGameRoleMigration playsGameRoleMigratio)
+            PlaysGameRoleMigration playsGameRoleMigration)
         {
             _gameCharacterClaimMigration = gameCharacterClaimMigration;
             _gameCharacterClaimVersionMigration = gameCharacterClaimVersionMigration;
-            _playsGameRoleMigratio = playsGameRoleMigratio;
+            _playsGameRoleMigration = playsGameRoleMigration;
         }
         
         public void Migrate()
         {
             _gameCharacterClaimMigration.Migrate();
             _gameCharacterClaimVersionMigration.Migrate();
-            _playsGameRoleMigratio.Migrate();
+            _playsGameRoleMigration.Migrate();
         }
     }
 }

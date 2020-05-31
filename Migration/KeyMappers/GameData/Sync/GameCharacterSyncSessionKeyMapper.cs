@@ -2,7 +2,7 @@
 
 namespace Migration.KeyMappers.GameData.Sync
 {
-    public class GameCharacterSyncSessionKeyMapper : GenericKeyMapper<Guid, Guid>
+    public class GameCharacterSyncSessionKeyMapper : GenericKeyMapper<string, Guid>
     {
         protected override Guid CreateTargetKey()
         {

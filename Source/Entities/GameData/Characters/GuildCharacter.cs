@@ -13,7 +13,7 @@ namespace LaDanse.Source.Entities.GameData.Characters
         public string Name { get; set; }
         public DateTime FromTime { get; set; }
         public DateTime? EndTime { get; set; }
-        public Guid RealmId { get; set; }
+        public string RealmId { get; set; }
 
         public virtual GameRealm Realm { get; set; }
     }

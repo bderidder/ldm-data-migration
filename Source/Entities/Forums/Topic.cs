@@ -5,13 +5,13 @@ namespace LaDanse.Source.Entities.Forums
 {
     public partial class Topic
     {
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
         public DateTime PostDate { get; set; }
         public string Subject { get; set; }
         public DateTime? LastPostDate { get; set; }
 
-        public Guid ForumId { get; set; }
+        public string ForumId { get; set; }
         public virtual Forum Forum { get; set; }
 
         public int? LastPostPosterId { get; set; }

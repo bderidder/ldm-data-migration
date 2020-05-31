@@ -2,19 +2,19 @@ using System.Linq;
 using LaDanse.Source;
 using LaDanse.Target;
 using LaDanse.Target.Entities.GameData.Sync.Profile;
-using Migration.KeyMappers.GameData.Sync.Profile;
+using Migration.KeyMappers.GameData.Sync;
 using Migration.KeyMappers.Identity;
 
 namespace Migration.Migrations.GameData.Sync.Profile
 {
     public class ProfileSyncMigration : BaseMigration, IMigration
     {
-        private readonly ProfileSyncKeyMapper _profileSyncKeyMapper;
+        private readonly GameCharacterSourceKeyMapper _profileSyncKeyMapper;
         private readonly UserKeyMapper _userKeyMapper;
         
         public ProfileSyncMigration(
             SourceDbContext sourceDbContext, TargetDbContext targetDbContext, 
-            ProfileSyncKeyMapper profileSyncKeyMapper, 
+            GameCharacterSourceKeyMapper profileSyncKeyMapper, 
             UserKeyMapper userKeyMapper)
             : base(sourceDbContext, targetDbContext)
         {

@@ -2,7 +2,7 @@
 
 namespace Migration.KeyMappers.Comments
 {
-    public class CommentKeyMapper : GenericKeyMapper<Guid, Guid>
+    public class CommentKeyMapper : GenericKeyMapper<string, Guid>
     {
         protected override Guid CreateTargetKey()
         {

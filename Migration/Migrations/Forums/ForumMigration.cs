@@ -56,7 +56,7 @@ namespace Migration.Migrations.Forums
 
                 newForum.LastPostDate = oldForum.LastPostDate;
                 newForum.LastPostPosterId = oldForum.LastPostPosterId != null ? _userKeyMapper.MapKey((int) oldForum.LastPostPosterId) : (Guid?) null;
-                newForum.LastPostTopicId = oldForum.LastPostTopicId != null ? _topicKeyMapper.MapKey((Guid) oldForum.LastPostTopicId) : (Guid?) null;
+                newForum.LastPostTopicId = oldForum.LastPostTopicId != null ? _topicKeyMapper.MapKey(oldForum.LastPostTopicId) : (Guid?) null;
             }
 
             TargetDbContext.SaveChanges();

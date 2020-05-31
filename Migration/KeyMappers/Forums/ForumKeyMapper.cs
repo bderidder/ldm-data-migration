@@ -2,7 +2,7 @@
 
 namespace Migration.KeyMappers.Forums
 {
-    public class ForumKeyMapper : GenericKeyMapper<Guid, Guid>
+    public class ForumKeyMapper : GenericKeyMapper<string, Guid>
     {
         protected override Guid CreateTargetKey()
         {

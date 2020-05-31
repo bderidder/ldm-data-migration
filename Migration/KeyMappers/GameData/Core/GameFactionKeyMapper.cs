@@ -2,7 +2,7 @@
 
 namespace Migration.KeyMappers.GameData.Core
 {
-    public class GameFactionKeyMapper : GenericKeyMapper<Guid, Guid>
+    public class GameFactionKeyMapper : GenericKeyMapper<string, Guid>
     {
         protected override Guid CreateTargetKey()
         {

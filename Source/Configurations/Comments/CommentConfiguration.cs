@@ -20,13 +20,15 @@ namespace LaDanse.Source.Configurations.Comments
 
             builder.Property(e => e.Id)
                 .HasColumnName("commentId")
+                .HasColumnType("char(36)")
                 .HasComment("(DC2Type:guid)")
                 .HasCharSet("utf8mb4")
                 .HasCollation("utf8mb4_unicode_ci");
 
             builder.Property(e => e.GroupId)
                 .HasColumnName("groupId")
-                .HasComment("(DC2Type:guid)")
+                .HasColumnType("char(36)")
+                //.HasComment("(DC2Type:guid)")
                 .HasCharSet("utf8mb4")
                 .HasCollation("utf8mb4_unicode_ci");
 

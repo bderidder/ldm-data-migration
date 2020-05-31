@@ -4,6 +4,6 @@ namespace LaDanse.Source.Entities.GameData.Sync
 {
     public partial class CharacterSource
     {
-        public Guid Id { get; set; }
+        public string Id { get; set; }
     }
 }

@@ -5,7 +5,7 @@ namespace LaDanse.Source.Entities.Forums
 {
     public partial class ForumLastVisit
     {
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
         public DateTime LastVisitDate { get; set; }
 

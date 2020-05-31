@@ -3,18 +3,18 @@ using LaDanse.Source;
 using LaDanse.Target;
 using LaDanse.Target.Entities.GameData.Sync.Guild;
 using Migration.KeyMappers.GameData.Characters;
-using Migration.KeyMappers.GameData.Sync.Guild;
+using Migration.KeyMappers.GameData.Sync;
 
 namespace Migration.Migrations.GameData.Sync.Guild
 {
     public class GameGuildSyncMigration : BaseMigration, IMigration
     {
-        private readonly GameGuildSyncKeyMapper _gameGuildSyncKeyMapper;
+        private readonly GameCharacterSourceKeyMapper _gameGuildSyncKeyMapper;
         private readonly GameGuildKeyMapper _gameGuildKeyMapper;
         
         public GameGuildSyncMigration(
             SourceDbContext sourceDbContext, TargetDbContext targetDbContext, 
-            GameGuildSyncKeyMapper gameGuildSyncKeyMapper, 
+            GameCharacterSourceKeyMapper gameGuildSyncKeyMapper, 
             GameGuildKeyMapper gameGuildKeyMapper)
             : base(sourceDbContext, targetDbContext)
         {

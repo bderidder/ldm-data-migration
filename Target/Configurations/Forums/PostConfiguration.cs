@@ -21,7 +21,7 @@ namespace LaDanse.Target.Configurations.Forums
             builder.Property(e => e.Content)
                 .IsRequired()
                 .HasColumnName("content")
-                .HasUtf8ColumnType(MySqlBuilderTypes.String(8192));
+                .HasUtf8ColumnType(MySqlBuilderTypes.LongText);
 
             builder.Property(e => e.PostDate)
                 .IsRequired()

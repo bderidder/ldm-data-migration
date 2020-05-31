@@ -16,7 +16,7 @@ namespace LaDanse.Source.Entities.Events
         public DateTime LastModifiedTime { get; set; }
         public string State { get; set; }
 
-        public Guid CommentGroupId { set; get; }
+        public string CommentGroupId { set; get; }
         public CommentGroup CommentGroup { set; get; }
 
         public int OrganiserId { get; set; }

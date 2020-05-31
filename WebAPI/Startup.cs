@@ -25,7 +25,7 @@ namespace WebAPI
         {
             services.AddDbContext<SourceDbContext>(options => options
                 .UseMySql(
-                    "server=localhost;port=3306;database=LDMMigration;user=root;password=sql",
+                    "server=localhost;port=3306;database=LDMMigration;user=root;password=sql;GuidFormat=None",
                     x => x.ServerVersion("5.7.30-mysql")
                 ));
                 
@@ -33,7 +33,8 @@ namespace WebAPI
                 .UseMySql(
                     "server=localhost;port=33061;database=LDMMigrationTarget;user=root;password=sql",
                     x => x.ServerVersion("8.0.20-mysql")
-                ));
+                )
+                .EnableSensitiveDataLogging());
 
             services.AddKeyMappers();
             services.AddMigrations();

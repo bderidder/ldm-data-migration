@@ -5,7 +5,7 @@ namespace LaDanse.Source.Entities.GameData.Sync.Profile
 {
     public partial class ProfileSync
     {
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
         public int AccountId { get; set; }
         public virtual Account Account { get; set; }

@@ -37,7 +37,7 @@ namespace Migration.Migrations.Forums
                     Id = _topicKeyMapper.MapKey(oldTopic.Id),
                     PostDate = oldTopic.PostDate,
                     Subject = oldTopic.Subject,
-                    ForumId = oldTopic.ForumId,
+                    ForumId = _forumKeyMapper.MapKey(oldTopic.ForumId),
                     PosterId = _userKeyMapper.MapKey(oldTopic.PosterId)
                 };
 

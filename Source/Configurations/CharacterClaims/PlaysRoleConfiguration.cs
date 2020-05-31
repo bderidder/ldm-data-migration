@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace LaDanse.Source.Configurations.CharacterClaims
 {
-    public class PlaysRoleConfiguration : IEntityTypeConfiguration<PlaysRole>
+    public class PlaysRoleConfiguration : IEntityTypeConfiguration<StringPlaysRole>
     {
-        public void Configure(EntityTypeBuilder<PlaysRole> builder)
+        public void Configure(EntityTypeBuilder<StringPlaysRole> builder)
         {
             builder.ToTable("PlaysRole");
 

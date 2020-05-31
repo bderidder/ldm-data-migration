@@ -8,7 +8,7 @@ namespace LaDanse.Source.Entities.GameData.Core
         {
         }
 
-        public Guid Id { get; set; }
+        public string Id { get; set; }
         public int GameId { get; set; }
         public string Name { get; set; }
     }

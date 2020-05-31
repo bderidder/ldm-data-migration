@@ -6,8 +6,6 @@ using Migration.KeyMappers.Forums;
 using Migration.KeyMappers.GameData.Characters;
 using Migration.KeyMappers.GameData.Core;
 using Migration.KeyMappers.GameData.Sync;
-using Migration.KeyMappers.GameData.Sync.Guild;
-using Migration.KeyMappers.GameData.Sync.Profile;
 using Migration.KeyMappers.Identity;
 using Migration.KeyMappers.Queues;
 using Migration.KeyMappers.Settings;
@@ -67,8 +65,6 @@ namespace Migration.KeyMappers
             services.AddScoped<GameCharacterSourceKeyMapper>();
             services.AddScoped<GameCharacterSyncSessionKeyMapper>();
             services.AddScoped<TrackedByKeyMapper>();
-            services.AddScoped<ProfileSyncKeyMapper>();
-            services.AddScoped<GameGuildSyncKeyMapper>();
 
             #endregion
 
