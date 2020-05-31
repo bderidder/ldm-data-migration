@@ -9,7 +9,7 @@ namespace LaDanse.Target.Entities.Forums
         public Guid Id { get; set; }
 
         public DateTime PostDate { get; set; }
-        public string Message { get; set; }
+        public string Content { get; set; }
 
         public Guid PosterId { get; set; }
         public virtual User Poster { get; set; }

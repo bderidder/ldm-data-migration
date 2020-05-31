@@ -35,7 +35,7 @@ namespace Migration.Migrations.Comments
                 {
                     Id = _commentKeyMapper.MapKey(comment.Id),
                     PostDate = comment.PostDate,
-                    Message = comment.Message,
+                    Content = comment.Message,
                     GroupId = _commentGroupKeyMapper.MapKey(comment.GroupId), 
                     PosterId = _userKeyMapper.MapKey(comment.PosterId)
                 };

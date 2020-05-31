@@ -9,7 +9,7 @@ namespace LaDanse.Target.Entities.Comments
         public Guid Id { get; set; }
 
         public DateTime PostDate { get; set; }
-        public string Message { get; set; }
+        public string Content { get; set; }
         
         public Guid GroupId { get; set; }
         public virtual CommentGroup Group { get; set; }

@@ -2,6 +2,7 @@
 using Migration.Migrations.CharacterClaims;
 using Migration.Migrations.Comments;
 using Migration.Migrations.Events;
+using Migration.Migrations.Forums;
 using Migration.Migrations.GameData;
 using Migration.Migrations.GameData.Characters;
 using Migration.Migrations.GameData.Core;
@@ -46,6 +47,13 @@ namespace Migration.Migrations
             #endregion
 
             #region Forums
+            
+            services.AddScoped<AllForumsMigrations>();
+            services.AddScoped<ForumMigration>();
+            services.AddScoped<TopicMigration>();
+            services.AddScoped<PostMigration>();
+            services.AddScoped<ForumLastVisitMigration>();
+            services.AddScoped<UnreadPostMigration>();
 
             #endregion
             

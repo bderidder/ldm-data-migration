@@ -2,6 +2,7 @@
 using Migration.KeyMappers.CharacterClaims;
 using Migration.KeyMappers.Comments;
 using Migration.KeyMappers.Events;
+using Migration.KeyMappers.Forums;
 using Migration.KeyMappers.GameData.Characters;
 using Migration.KeyMappers.GameData.Core;
 using Migration.KeyMappers.GameData.Sync;
@@ -38,6 +39,12 @@ namespace Migration.KeyMappers
             #endregion
 
             #region Forums
+            
+            services.AddScoped<ForumKeyMapper>();
+            services.AddScoped<ForumLastVisitKeyMapper>();
+            services.AddScoped<PostKeyMapper>();
+            services.AddScoped<TopicKeyMapper>();
+            services.AddScoped<UnreadPostKeyMapper>();
 
             #endregion
 

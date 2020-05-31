@@ -18,8 +18,8 @@ namespace LaDanse.Target.Configurations.Comments
 
             builder.HasGuidKey();
             
-            builder.Property(e => e.Message)
-                .HasColumnName("message")
+            builder.Property(e => e.Content)
+                .HasColumnName("content")
                 .IsRequired()
                 .HasUtf8ColumnType(MySqlBuilderTypes.String((4096)));
 

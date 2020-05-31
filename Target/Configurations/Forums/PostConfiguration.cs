@@ -18,9 +18,9 @@ namespace LaDanse.Target.Configurations.Forums
 
             builder.HasGuidKey();
 
-            builder.Property(e => e.Message)
+            builder.Property(e => e.Content)
                 .IsRequired()
-                .HasColumnName("message")
+                .HasColumnName("content")
                 .HasUtf8ColumnType(MySqlBuilderTypes.String(8192));
 
             builder.Property(e => e.PostDate)
