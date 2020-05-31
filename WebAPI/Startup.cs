@@ -1,3 +1,5 @@
+using LaDanse.Migration.KeyMappers;
+using LaDanse.Migration.Migrations;
 using LaDanse.Source;
 using LaDanse.Target;
 using Microsoft.AspNetCore.Builder;
@@ -6,8 +8,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Migration.KeyMappers;
-using Migration.Migrations;
 
 namespace WebAPI
 {
@@ -33,8 +33,7 @@ namespace WebAPI
                 .UseMySql(
                     "server=localhost;port=33061;database=LDMMigrationTarget;user=root;password=sql",
                     x => x.ServerVersion("8.0.20-mysql")
-                )
-                .EnableSensitiveDataLogging());
+                ));
 
             services.AddKeyMappers();
             services.AddMigrations();

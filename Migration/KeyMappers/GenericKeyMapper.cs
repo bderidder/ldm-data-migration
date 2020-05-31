@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Migration.KeyMappers
+namespace LaDanse.Migration.KeyMappers
 {
     public abstract class GenericKeyMapper<TSourceKey, TTargetKey>
     {

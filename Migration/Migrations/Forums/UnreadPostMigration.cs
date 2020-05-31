@@ -1,11 +1,11 @@
 using System.Linq;
+using LaDanse.Migration.KeyMappers.Forums;
+using LaDanse.Migration.KeyMappers.Identity;
 using LaDanse.Source;
 using LaDanse.Target;
 using LaDanse.Target.Entities.Forums;
-using Migration.KeyMappers.Forums;
-using Migration.KeyMappers.Identity;
 
-namespace Migration.Migrations.Forums
+namespace LaDanse.Migration.Migrations.Forums
 {
     public class UnreadPostMigration : BaseMigration, IMigration
     {

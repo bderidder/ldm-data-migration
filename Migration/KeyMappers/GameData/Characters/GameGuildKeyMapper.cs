@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Migration.KeyMappers.GameData.Characters
+namespace LaDanse.Migration.KeyMappers.GameData.Characters
 {
     public class GameGuildKeyMapper : GenericKeyMapper<string, Guid>
     {

@@ -1,11 +1,11 @@
 ﻿using System.Linq;
+using LaDanse.Migration.KeyMappers.Identity;
+using LaDanse.Migration.KeyMappers.Telemetry;
 using LaDanse.Source;
 using LaDanse.Target;
 using LaDanse.Target.Entities.Telemetry;
-using Migration.KeyMappers.Identity;
-using Migration.KeyMappers.Telemetry;
 
-namespace Migration.Migrations.Telemetry
+namespace LaDanse.Migration.Migrations.Telemetry
 {
     public class FeedbackMigration : BaseMigration, IMigration
     {

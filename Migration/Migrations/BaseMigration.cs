@@ -1,7 +1,7 @@
 ﻿using LaDanse.Source;
 using LaDanse.Target;
 
-namespace Migration.Migrations
+namespace LaDanse.Migration.Migrations
 {
     public abstract class BaseMigration
     {

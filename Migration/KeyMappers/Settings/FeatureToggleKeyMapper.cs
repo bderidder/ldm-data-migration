@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Migration.KeyMappers.Settings
+namespace LaDanse.Migration.KeyMappers.Settings
 {
     public class FeatureToggleKeyMapper : GenericKeyMapper<int, Guid>
     {

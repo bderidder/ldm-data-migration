@@ -1,7 +1,7 @@
 ﻿using System;
 using LaDanse.Target.Entities.Events;
 
-namespace Migration.Migrations.Events
+namespace LaDanse.Migration.Migrations.Events
 {
     public static class StringToSignUpType
     {

@@ -1,4 +1,4 @@
-namespace Migration.Migrations.Forums
+namespace LaDanse.Migration.Migrations.Forums
 {
     public class AllForumsMigrations : IMigration
     {

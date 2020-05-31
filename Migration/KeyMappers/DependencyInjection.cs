@@ -1,17 +1,17 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Migration.KeyMappers.CharacterClaims;
-using Migration.KeyMappers.Comments;
-using Migration.KeyMappers.Events;
-using Migration.KeyMappers.Forums;
-using Migration.KeyMappers.GameData.Characters;
-using Migration.KeyMappers.GameData.Core;
-using Migration.KeyMappers.GameData.Sync;
-using Migration.KeyMappers.Identity;
-using Migration.KeyMappers.Queues;
-using Migration.KeyMappers.Settings;
-using Migration.KeyMappers.Telemetry;
+﻿using LaDanse.Migration.KeyMappers.CharacterClaims;
+using LaDanse.Migration.KeyMappers.Comments;
+using LaDanse.Migration.KeyMappers.Events;
+using LaDanse.Migration.KeyMappers.Forums;
+using LaDanse.Migration.KeyMappers.GameData.Characters;
+using LaDanse.Migration.KeyMappers.GameData.Core;
+using LaDanse.Migration.KeyMappers.GameData.Sync;
+using LaDanse.Migration.KeyMappers.Identity;
+using LaDanse.Migration.KeyMappers.Queues;
+using LaDanse.Migration.KeyMappers.Settings;
+using LaDanse.Migration.KeyMappers.Telemetry;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Migration.KeyMappers
+namespace LaDanse.Migration.KeyMappers
 {
     public static class DependencyInjection
     {

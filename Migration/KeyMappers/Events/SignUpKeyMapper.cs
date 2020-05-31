@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Migration.KeyMappers.Events
+namespace LaDanse.Migration.KeyMappers.Events
 {
     public class SignUpKeyMapper : GenericKeyMapper<int, Guid>
     {

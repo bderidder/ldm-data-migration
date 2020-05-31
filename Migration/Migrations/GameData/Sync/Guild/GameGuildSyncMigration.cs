@@ -1,11 +1,11 @@
 using System.Linq;
+using LaDanse.Migration.KeyMappers.GameData.Characters;
+using LaDanse.Migration.KeyMappers.GameData.Sync;
 using LaDanse.Source;
 using LaDanse.Target;
 using LaDanse.Target.Entities.GameData.Sync.Guild;
-using Migration.KeyMappers.GameData.Characters;
-using Migration.KeyMappers.GameData.Sync;
 
-namespace Migration.Migrations.GameData.Sync.Guild
+namespace LaDanse.Migration.Migrations.GameData.Sync.Guild
 {
     public class GameGuildSyncMigration : BaseMigration, IMigration
     {

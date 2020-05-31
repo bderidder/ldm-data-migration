@@ -1,4 +1,4 @@
-namespace Migration.Migrations.Settings
+namespace LaDanse.Migration.Migrations.Settings
 {
     public class AllSettingsMigrations : IMigration
     {

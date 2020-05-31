@@ -1,4 +1,4 @@
-namespace Migration.Migrations.Events
+namespace LaDanse.Migration.Migrations.Events
 {
     public class AllEventsMigrations : IMigration
     {

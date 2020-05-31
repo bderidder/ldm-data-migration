@@ -1,4 +1,4 @@
-namespace Migration.Migrations.CharacterClaims
+namespace LaDanse.Migration.Migrations.CharacterClaims
 {
     public class AllCharacterClaimsMigration : IMigration
     {

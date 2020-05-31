@@ -1,8 +1,8 @@
-using Migration.Migrations.GameData.Characters;
-using Migration.Migrations.GameData.Core;
-using Migration.Migrations.GameData.Sync;
+using LaDanse.Migration.Migrations.GameData.Characters;
+using LaDanse.Migration.Migrations.GameData.Core;
+using LaDanse.Migration.Migrations.GameData.Sync;
 
-namespace Migration.Migrations.GameData
+namespace LaDanse.Migration.Migrations.GameData
 {
     public class AllGameDataMigrations : IMigration
     {

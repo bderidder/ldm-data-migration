@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Migration.KeyMappers.Identity
+namespace LaDanse.Migration.KeyMappers.Identity
 {
     public class UserKeyMapper : GenericKeyMapper<int, Guid>
     {

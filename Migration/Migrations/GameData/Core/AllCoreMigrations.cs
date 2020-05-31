@@ -1,4 +1,4 @@
-namespace Migration.Migrations.GameData.Core
+namespace LaDanse.Migration.Migrations.GameData.Core
 {
     public class AllCoreMigrations : IMigration
     {

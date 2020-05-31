@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Migration.KeyMappers.Events
+namespace LaDanse.Migration.KeyMappers.Events
 {
     public class SignedForGameRoleKeyMapper : GenericKeyMapper<int, Guid>
     {

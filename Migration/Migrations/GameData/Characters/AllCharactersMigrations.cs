@@ -1,4 +1,4 @@
-namespace Migration.Migrations.GameData.Characters
+namespace LaDanse.Migration.Migrations.GameData.Characters
 {
     public class AllCharactersMigrations : IMigration
     {

@@ -1,10 +1,10 @@
 using System.Linq;
+using LaDanse.Migration.KeyMappers.GameData.Core;
 using LaDanse.Source;
 using LaDanse.Target;
 using LaDanse.Target.Entities.GameData.Core;
-using Migration.KeyMappers.GameData.Core;
 
-namespace Migration.Migrations.GameData.Core
+namespace LaDanse.Migration.Migrations.GameData.Core
 {
     public class GameClassMigration : BaseMigration, IMigration
     {

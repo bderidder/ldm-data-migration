@@ -1,4 +1,4 @@
-namespace Migration.Migrations.Queues
+namespace LaDanse.Migration.Migrations.Queues
 {
     public class AllQueuesMigrations : IMigration
     {

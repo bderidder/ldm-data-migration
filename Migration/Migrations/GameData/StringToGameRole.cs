@@ -1,7 +1,7 @@
 ﻿using System;
 using LaDanse.Target.Entities.GameData;
 
-namespace Migration.Migrations.GameData
+namespace LaDanse.Migration.Migrations.GameData
 {
     public static class StringToGameRole
     {

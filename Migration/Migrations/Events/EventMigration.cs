@@ -1,12 +1,12 @@
 using System.Linq;
+using LaDanse.Migration.KeyMappers.Comments;
+using LaDanse.Migration.KeyMappers.Events;
+using LaDanse.Migration.KeyMappers.Identity;
 using LaDanse.Source;
 using LaDanse.Target;
 using LaDanse.Target.Entities.Events;
-using Migration.KeyMappers.Comments;
-using Migration.KeyMappers.Events;
-using Migration.KeyMappers.Identity;
 
-namespace Migration.Migrations.Events
+namespace LaDanse.Migration.Migrations.Events
 {
     public class EventMigration : BaseMigration, IMigration
     {
