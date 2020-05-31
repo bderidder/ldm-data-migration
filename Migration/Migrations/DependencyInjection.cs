@@ -100,6 +100,8 @@ namespace Migration.Migrations
             
             services.AddScoped<AllTelemetryMigrations>();
             services.AddScoped<FeedbackMigration>();
+            services.AddScoped<FeatureUseMigration>();
+            services.AddScoped<MailSendMigration>();
 
             #endregion
             

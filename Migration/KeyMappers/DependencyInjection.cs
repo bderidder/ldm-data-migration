@@ -91,6 +91,8 @@ namespace Migration.KeyMappers
             #region Telemetry
             
             services.AddScoped<FeedbackKeyMapper>();
+            services.AddScoped<MailSendKeyMapper>();
+            services.AddScoped<FeatureUseKeyMapper>();
 
             #endregion
             
