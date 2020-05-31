@@ -3,6 +3,7 @@ using Migration.Migrations.Comments;
 using Migration.Migrations.Events;
 using Migration.Migrations.Forums;
 using Migration.Migrations.Identity;
+using Migration.Migrations.Queues;
 using Migration.Migrations.Telemetry;
 
 namespace Migration.Migrations
@@ -14,6 +15,7 @@ namespace Migration.Migrations
         private readonly AllEventsMigrations _allEventsMigrations;
         private readonly AllForumsMigrations _allForumsMigrations;
         private readonly IdentityMigrations _identityMigrations;
+        private readonly AllQueuesMigrations _allQueuesMigrations;
         private readonly AllTelemetryMigrations _allTelemetryMigrations;
         
         public AllTargetMigrations(
@@ -22,7 +24,8 @@ namespace Migration.Migrations
             AllTelemetryMigrations allTelemetryMigrations, 
             AllCommentsMigration allCommentsMigration, 
             AllEventsMigrations allEventsMigrations, 
-            AllForumsMigrations allForumsMigrations)
+            AllForumsMigrations allForumsMigrations, 
+            AllQueuesMigrations allQueuesMigrations)
         {
             _allCharacterClaimsMigration = allCharacterClaimsMigration;
             _identityMigrations = identityMigrations;
@@ -30,6 +33,7 @@ namespace Migration.Migrations
             _allCommentsMigration = allCommentsMigration;
             _allEventsMigrations = allEventsMigrations;
             _allForumsMigrations = allForumsMigrations;
+            _allQueuesMigrations = allQueuesMigrations;
         }
         
         public void Migrate()
@@ -39,6 +43,7 @@ namespace Migration.Migrations
             _allCommentsMigration.Migrate();
             _allForumsMigrations.Migrate();
             _allEventsMigrations.Migrate();
+            _allQueuesMigrations.Migrate();
             _allTelemetryMigrations.Migrate();
         }
     }

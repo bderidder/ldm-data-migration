@@ -9,6 +9,7 @@ using Migration.KeyMappers.GameData.Sync;
 using Migration.KeyMappers.GameData.Sync.Guild;
 using Migration.KeyMappers.GameData.Sync.Profile;
 using Migration.KeyMappers.Identity;
+using Migration.KeyMappers.Queues;
 using Migration.KeyMappers.Telemetry;
 
 namespace Migration.KeyMappers
@@ -77,6 +78,9 @@ namespace Migration.KeyMappers
             #endregion
 
             #region Queues
+            
+            services.AddScoped<ActivityQueueItemKeyMapper>();
+            services.AddScoped<NotificationQueueItemKeyMapper>();
 
             #endregion
 

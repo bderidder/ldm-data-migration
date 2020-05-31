@@ -10,6 +10,7 @@ using Migration.Migrations.GameData.Sync;
 using Migration.Migrations.GameData.Sync.Guild;
 using Migration.Migrations.GameData.Sync.Profile;
 using Migration.Migrations.Identity;
+using Migration.Migrations.Queues;
 using Migration.Migrations.Telemetry;
 
 namespace Migration.Migrations
@@ -89,6 +90,10 @@ namespace Migration.Migrations
             #endregion
             
             #region Queues
+            
+            services.AddScoped<AllQueuesMigrations>();
+            services.AddScoped<ActivityQueueItemMigration>();
+            services.AddScoped<NotificationQueueItemMigration>();
 
             #endregion
 
