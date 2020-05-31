@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Migration.Migrations.CharacterClaims;
+using Migration.Migrations.Comments;
 using Migration.Migrations.GameData;
 using Migration.Migrations.GameData.Characters;
 using Migration.Migrations.GameData.Core;
@@ -19,14 +20,18 @@ namespace Migration.Migrations
             
             #region CharacterClaims
 
+            services.AddScoped<AllCharacterClaimsMigration>();
             services.AddScoped<GameCharacterClaimMigration>();
             services.AddScoped<GameCharacterClaimVersionMigration>();
             services.AddScoped<PlaysGameRoleMigration>();
-            services.AddScoped<AllCharacterClaimsMigration>();
-            
+
             #endregion
             
             #region Comments
+            
+            services.AddScoped<AllCommentsMigration>();
+            services.AddScoped<CommentGroupMigration>();
+            services.AddScoped<CommentMigration>();
 
             #endregion
             

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Migration.KeyMappers.CharacterClaims;
+using Migration.KeyMappers.Comments;
 using Migration.KeyMappers.GameData.Characters;
 using Migration.KeyMappers.GameData.Core;
 using Migration.KeyMappers.GameData.Sync;
@@ -21,6 +22,9 @@ namespace Migration.KeyMappers
             #endregion
 
             #region Comments
+            
+            services.AddScoped<CommentGroupKeyMapper>();
+            services.AddScoped<CommentKeyMapper>();
 
             #endregion
 
