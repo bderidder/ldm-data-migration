@@ -84,7 +84,7 @@ namespace Migration.Migrations
 
             #region Telemetry
             
-            services.AddScoped<TelemetryMigrations>();
+            services.AddScoped<AllTelemetryMigrations>();
             services.AddScoped<FeedbackMigration>();
 
             #endregion

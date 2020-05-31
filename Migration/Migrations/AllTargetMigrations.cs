@@ -10,17 +10,17 @@ namespace Migration.Migrations
         private readonly AllCharacterClaimsMigration _allCharacterClaimsMigration;
         private readonly AllCommentsMigration _allCommentsMigration;
         private readonly IdentityMigrations _identityMigrations;
-        private readonly TelemetryMigrations _telemetryMigrations;
+        private readonly AllTelemetryMigrations _allTelemetryMigrations;
         
         public AllTargetMigrations(
             AllCharacterClaimsMigration allCharacterClaimsMigration,
             IdentityMigrations identityMigrations,
-            TelemetryMigrations telemetryMigrations, 
+            AllTelemetryMigrations allTelemetryMigrations, 
             AllCommentsMigration allCommentsMigration)
         {
             _allCharacterClaimsMigration = allCharacterClaimsMigration;
             _identityMigrations = identityMigrations;
-            _telemetryMigrations = telemetryMigrations;
+            _allTelemetryMigrations = allTelemetryMigrations;
             _allCommentsMigration = allCommentsMigration;
         }
         
@@ -29,7 +29,7 @@ namespace Migration.Migrations
             _identityMigrations.Migrate();
             _allCharacterClaimsMigration.Migrate();
             _allCommentsMigration.Migrate();
-            _telemetryMigrations.Migrate();
+            _allTelemetryMigrations.Migrate();
         }
     }
 }

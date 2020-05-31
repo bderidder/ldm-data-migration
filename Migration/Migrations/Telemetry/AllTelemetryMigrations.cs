@@ -1,10 +1,10 @@
 ﻿namespace Migration.Migrations.Telemetry
 {
-    public class TelemetryMigrations : IMigration
+    public class AllTelemetryMigrations : IMigration
     {
         private readonly FeedbackMigration _feedbackMigration;
         
-        public TelemetryMigrations(FeedbackMigration feedbackMigration)
+        public AllTelemetryMigrations(FeedbackMigration feedbackMigration)
         {
             _feedbackMigration = feedbackMigration;
         }
