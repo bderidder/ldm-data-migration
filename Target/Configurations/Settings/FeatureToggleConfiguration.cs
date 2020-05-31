@@ -10,7 +10,7 @@ namespace LaDanse.Target.Configurations.Settings
         {
             builder.ToTable("FeatureToggle");
 
-            builder.HasIndex(e => e.ToggleForId)
+            builder.HasIndex(e => e.UserId)
                 .HasName("IDX_D25E05DD612E729E");
 
             builder.HasGuidKey();
@@ -23,12 +23,12 @@ namespace LaDanse.Target.Configurations.Settings
             builder.Property(e => e.Toggle)
                 .HasColumnName("toggle");
 
-            builder.Property(e => e.ToggleForId)
-                .HasColumnName("toggleForId")
+            builder.Property(e => e.UserId)
+                .HasColumnName("userId")
                 .HasForeignKeyColumnType();
-            builder.HasOne(d => d.ToggleFor)
+            builder.HasOne(d => d.User)
                 .WithMany()
-                .HasForeignKey(d => d.ToggleForId)
+                .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_D25E05DD612E729E");
         }

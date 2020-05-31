@@ -2,8 +2,10 @@
 using Migration.Migrations.Comments;
 using Migration.Migrations.Events;
 using Migration.Migrations.Forums;
+using Migration.Migrations.GameData;
 using Migration.Migrations.Identity;
 using Migration.Migrations.Queues;
+using Migration.Migrations.Settings;
 using Migration.Migrations.Telemetry;
 
 namespace Migration.Migrations
@@ -17,6 +19,8 @@ namespace Migration.Migrations
         private readonly IdentityMigrations _identityMigrations;
         private readonly AllQueuesMigrations _allQueuesMigrations;
         private readonly AllTelemetryMigrations _allTelemetryMigrations;
+        private readonly AllSettingsMigrations _allSettingsMigrations;
+        private readonly AllGameDataMigrations _allGameDataMigrations;
         
         public AllTargetMigrations(
             AllCharacterClaimsMigration allCharacterClaimsMigration,
@@ -25,7 +29,8 @@ namespace Migration.Migrations
             AllCommentsMigration allCommentsMigration, 
             AllEventsMigrations allEventsMigrations, 
             AllForumsMigrations allForumsMigrations, 
-            AllQueuesMigrations allQueuesMigrations)
+            AllQueuesMigrations allQueuesMigrations, AllSettingsMigrations allSettingsMigrations, 
+            AllGameDataMigrations allGameDataMigrations)
         {
             _allCharacterClaimsMigration = allCharacterClaimsMigration;
             _identityMigrations = identityMigrations;
@@ -34,17 +39,25 @@ namespace Migration.Migrations
             _allEventsMigrations = allEventsMigrations;
             _allForumsMigrations = allForumsMigrations;
             _allQueuesMigrations = allQueuesMigrations;
+            _allSettingsMigrations = allSettingsMigrations;
+            _allGameDataMigrations = allGameDataMigrations;
         }
         
         public void Migrate()
         {
+            // users must be migrated first
             _identityMigrations.Migrate();
+            _allGameDataMigrations.Migrate();
+            // game data must have been migrated at this point
             _allCharacterClaimsMigration.Migrate();
             _allCommentsMigration.Migrate();
-            _allForumsMigrations.Migrate();
+            // comments must have been migrated at this point
             _allEventsMigrations.Migrate();
+            _allForumsMigrations.Migrate();
             _allQueuesMigrations.Migrate();
+            _allSettingsMigrations.Migrate();
             _allTelemetryMigrations.Migrate();
+            
         }
     }
 }

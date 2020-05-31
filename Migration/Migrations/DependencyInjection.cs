@@ -11,6 +11,7 @@ using Migration.Migrations.GameData.Sync.Guild;
 using Migration.Migrations.GameData.Sync.Profile;
 using Migration.Migrations.Identity;
 using Migration.Migrations.Queues;
+using Migration.Migrations.Settings;
 using Migration.Migrations.Telemetry;
 
 namespace Migration.Migrations
@@ -98,6 +99,11 @@ namespace Migration.Migrations
             #endregion
 
             #region Settings
+            
+            services.AddScoped<AllSettingsMigrations>();
+            services.AddScoped<SettingMigration>();
+            services.AddScoped<FeatureToggleMigration>();
+            services.AddScoped<CalendarExportMigration>();
 
             #endregion
 

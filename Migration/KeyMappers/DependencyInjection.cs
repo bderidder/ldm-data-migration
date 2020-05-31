@@ -10,6 +10,7 @@ using Migration.KeyMappers.GameData.Sync.Guild;
 using Migration.KeyMappers.GameData.Sync.Profile;
 using Migration.KeyMappers.Identity;
 using Migration.KeyMappers.Queues;
+using Migration.KeyMappers.Settings;
 using Migration.KeyMappers.Telemetry;
 
 namespace Migration.KeyMappers
@@ -85,6 +86,10 @@ namespace Migration.KeyMappers
             #endregion
 
             #region Settings
+            
+            services.AddScoped<SettingKeyMapper>();
+            services.AddScoped<FeatureToggleKeyMapper>();
+            services.AddScoped<CalendarExportKeyMapper>();
 
             #endregion
 

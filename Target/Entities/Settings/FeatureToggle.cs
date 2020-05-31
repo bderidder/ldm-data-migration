@@ -11,7 +11,7 @@ namespace LaDanse.Target.Entities.Settings
         public string Feature { get; set; }
         public bool Toggle { get; set; }
 
-        public Guid ToggleForId { get; set; }
-        public virtual User ToggleFor { get; set; }
+        public Guid UserId { get; set; }
+        public virtual User User { get; set; }
     }
 }
