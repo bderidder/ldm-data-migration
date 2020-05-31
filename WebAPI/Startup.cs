@@ -33,8 +33,7 @@ namespace WebAPI
                 .UseMySql(
                     "server=localhost;port=33061;database=LDMMigrationTarget;user=root;password=sql",
                     x => x.ServerVersion("8.0.20-mysql")
-                )
-                .EnableSensitiveDataLogging());
+                ));
 
             services.AddKeyMappers();
             services.AddMigrations();
