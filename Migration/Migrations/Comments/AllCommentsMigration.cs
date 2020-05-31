@@ -1,11 +1,3 @@
-using System.Linq;
-using LaDanse.Source;
-using LaDanse.Target;
-using LaDanse.Target.Entities.GameData.Sync;
-using Migration.KeyMappers.GameData.Characters;
-using Migration.KeyMappers.GameData.Core;
-using Migration.KeyMappers.GameData.Sync;
-
 namespace Migration.Migrations.Comments
 {
     public class AllCommentsMigration : IMigration

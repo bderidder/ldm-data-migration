@@ -1,9 +1,7 @@
 using System.Linq;
 using LaDanse.Source;
 using LaDanse.Target;
-using LaDanse.Target.Entities.GameData.Characters;
 using LaDanse.Target.Entities.GameData.Core;
-using Migration.KeyMappers.GameData.Characters;
 using Migration.KeyMappers.GameData.Core;
 
 namespace Migration.Migrations.GameData.Characters

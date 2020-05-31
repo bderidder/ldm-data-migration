@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using LaDanse.Source;
 using LaDanse.Target;
 using LaDanse.Target.Entities.CharacterClaims;

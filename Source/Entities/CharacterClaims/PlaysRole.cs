@@ -1,5 +1,4 @@
 ﻿using System;
-using LaDanse.Source.Entities.CharacterClaims;
 using LaDanse.Source.Entities.GameData;
 
 namespace LaDanse.Source.Entities.CharacterClaims

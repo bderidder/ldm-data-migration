@@ -1,6 +1,3 @@
-using Microsoft.EntityFrameworkCore.Query;
-using Migration.Migrations.CharacterClaims;
-
 namespace Migration.Migrations.GameData.Characters
 {
     public class AllCharactersMigrations : IMigration

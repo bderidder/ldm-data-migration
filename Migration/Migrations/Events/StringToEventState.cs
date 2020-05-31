@@ -1,6 +1,5 @@
 ﻿using System;
 using LaDanse.Target.Entities.Events;
-using LaDanse.Target.Entities.GameData;
 
 namespace Migration.Migrations.Events
 {

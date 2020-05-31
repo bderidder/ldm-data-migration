@@ -1,10 +1,7 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using LaDanse.Source;
 using LaDanse.Target;
-using LaDanse.Target.Entities.Identity;
 using LaDanse.Target.Entities.Telemetry;
-using Migration.KeyMappers;
 using Migration.KeyMappers.Identity;
 using Migration.KeyMappers.Telemetry;
 

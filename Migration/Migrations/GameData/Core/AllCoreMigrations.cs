@@ -1,4 +1,3 @@
-using Migration.KeyMappers.GameData.Core;
 using Migration.Migrations.GameData.Characters;
 
 namespace Migration.Migrations.GameData.Core

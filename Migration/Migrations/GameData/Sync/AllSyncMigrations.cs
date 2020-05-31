@@ -1,4 +1,3 @@
-using Migration.Migrations.GameData.Core;
 using Migration.Migrations.GameData.Sync.Guild;
 using Migration.Migrations.GameData.Sync.Profile;
 

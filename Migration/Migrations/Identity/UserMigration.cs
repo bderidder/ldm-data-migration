@@ -3,7 +3,6 @@ using System.Linq;
 using LaDanse.Source;
 using LaDanse.Target;
 using LaDanse.Target.Entities.Identity;
-using Migration.KeyMappers;
 using Migration.KeyMappers.Identity;
 
 namespace Migration.Migrations
