@@ -3,6 +3,7 @@ using LaDanse.Source;
 using LaDanse.Target;
 using LaDanse.Target.Entities.GameData.Sync.Profile;
 using Migration.KeyMappers.GameData.Core;
+using Migration.KeyMappers.GameData.Sync.Profile;
 using Migration.KeyMappers.Identity;
 
 namespace Migration.Migrations.GameData.Sync.Profile

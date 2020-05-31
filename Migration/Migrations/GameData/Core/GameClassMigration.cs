@@ -4,7 +4,7 @@ using LaDanse.Target;
 using LaDanse.Target.Entities.GameData.Core;
 using Migration.KeyMappers.GameData.Core;
 
-namespace Migration.Migrations.GameData.Characters
+namespace Migration.Migrations.GameData.Core
 {
     public class GameClassMigration : BaseMigration, IMigration
     {

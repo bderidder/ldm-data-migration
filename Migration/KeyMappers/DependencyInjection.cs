@@ -6,6 +6,8 @@ using Migration.KeyMappers.Forums;
 using Migration.KeyMappers.GameData.Characters;
 using Migration.KeyMappers.GameData.Core;
 using Migration.KeyMappers.GameData.Sync;
+using Migration.KeyMappers.GameData.Sync.Guild;
+using Migration.KeyMappers.GameData.Sync.Profile;
 using Migration.KeyMappers.Identity;
 using Migration.KeyMappers.Telemetry;
 

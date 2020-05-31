@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Migration.KeyMappers.GameData.Core
+namespace Migration.KeyMappers.GameData.Sync.Guild
 {
     public class GameGuildSyncKeyMapper : GenericKeyMapper<Guid, Guid>
     {
