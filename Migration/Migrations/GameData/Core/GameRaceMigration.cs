@@ -6,7 +6,7 @@ using Migration.KeyMappers.GameData.Core;
 
 namespace Migration.Migrations.GameData.Core
 {
-    public class GameRaceMigration : BaseMigration
+    public class GameRaceMigration : BaseMigration, IMigration
     {
         private readonly GameRaceKeyMapper _gameRaceKeyMapper;
         private readonly GameFactionKeyMapper _gameFactionKeyMapper;
@@ -21,7 +21,7 @@ namespace Migration.Migrations.GameData.Core
             _gameFactionKeyMapper = gameFactionKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var gameRaces = SourceDbContext.GameRaces.ToList();
 

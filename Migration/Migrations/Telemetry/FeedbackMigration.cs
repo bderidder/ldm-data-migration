@@ -5,9 +5,9 @@ using LaDanse.Target.Entities.Telemetry;
 using Migration.KeyMappers.Identity;
 using Migration.KeyMappers.Telemetry;
 
-namespace Migration.Migrations
+namespace Migration.Migrations.Telemetry
 {
-    public class FeedbackMigration : BaseMigration
+    public class FeedbackMigration : BaseMigration, IMigration
     {
         private readonly UserKeyMapper _userKeyMapper;
         private readonly FeedbackKeyMapper _feedbackKeyMapper;
@@ -23,7 +23,7 @@ namespace Migration.Migrations
             _feedbackKeyMapper = feedbackKeyMapper;
         }
 
-        public override void Migrate()
+        public void Migrate()
         {
             var feedbacks = SourceDbContext.Feedbacks.ToList();
 

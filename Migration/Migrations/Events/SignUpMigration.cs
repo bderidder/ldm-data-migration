@@ -7,7 +7,7 @@ using Migration.KeyMappers.Identity;
 
 namespace Migration.Migrations.Events
 {
-    public class SignUpMigration : BaseMigration
+    public class SignUpMigration : BaseMigration, IMigration
     {
         private readonly SignUpKeyMapper _signUpKeyMapper;
         private readonly EventKeyMapper _eventKeyMapper;
@@ -25,7 +25,7 @@ namespace Migration.Migrations.Events
             _userKeyMapper = userKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var signUps = SourceDbContext.SignUps.ToList();
 

@@ -8,7 +8,7 @@ using Migration.KeyMappers.GameData.Sync;
 
 namespace Migration.Migrations.GameData.Sync
 {
-    public class TrackedByMigration : BaseMigration
+    public class TrackedByMigration : BaseMigration, IMigration
     {
         private readonly TrackedByKeyMapper _trackedByKeyMapper;
         private readonly GameCharacterKeyMapper _gameCharacterKeyMapper;
@@ -26,7 +26,7 @@ namespace Migration.Migrations.GameData.Sync
             _gameCharacterKeyMapper = gameCharacterKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var trackedBys = SourceDbContext.TrackedBys.ToList();
 

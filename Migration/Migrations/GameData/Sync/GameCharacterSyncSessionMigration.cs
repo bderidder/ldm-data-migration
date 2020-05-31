@@ -7,7 +7,7 @@ using Migration.KeyMappers.GameData.Sync;
 
 namespace Migration.Migrations.GameData.Sync
 {
-    public class GameCharacterSyncSessionMigration : BaseMigration
+    public class GameCharacterSyncSessionMigration : BaseMigration, IMigration
     {
         private readonly GameCharacterSyncSessionKeyMapper _gameCharacterSyncSessionKeyMapper;
         private readonly GameCharacterSourceKeyMapper _gameCharacterSourceKeyMapper;
@@ -22,7 +22,7 @@ namespace Migration.Migrations.GameData.Sync
             _gameCharacterSourceKeyMapper = gameCharacterSourceKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var characterSyncSessions = SourceDbContext.CharacterSyncSessions.ToList();
 

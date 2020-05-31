@@ -8,7 +8,7 @@ using Migration.KeyMappers.Identity;
 
 namespace Migration.Migrations.CharacterClaims
 {
-    public class GameCharacterClaimMigration : BaseMigration
+    public class GameCharacterClaimMigration : BaseMigration, IMigration
     {
         private readonly UserKeyMapper _userKeyMapper;
         private readonly GameCharacterKeyMapper _gameCharacterKeyMapper;
@@ -26,7 +26,7 @@ namespace Migration.Migrations.CharacterClaims
             _gameCharacterClaimKeyMapper = gameCharacterClaimKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var claims = SourceDbContext.CharacterClaims.ToList();
 

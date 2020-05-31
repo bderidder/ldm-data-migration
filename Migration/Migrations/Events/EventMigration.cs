@@ -8,7 +8,7 @@ using Migration.KeyMappers.Identity;
 
 namespace Migration.Migrations.Events
 {
-    public class EventMigration : BaseMigration
+    public class EventMigration : BaseMigration, IMigration
     {
         private readonly EventKeyMapper _eventKeyMapper;
         private readonly CommentGroupKeyMapper _commentGroupKeyMapper;
@@ -26,7 +26,7 @@ namespace Migration.Migrations.Events
             _userKeyMapper = userKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var events = SourceDbContext.Events.ToList();
 

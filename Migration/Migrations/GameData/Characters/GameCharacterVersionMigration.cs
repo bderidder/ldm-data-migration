@@ -7,7 +7,7 @@ using Migration.KeyMappers.GameData.Core;
 
 namespace Migration.Migrations.GameData.Characters
 {
-    public class GameCharacterVersionMigration : BaseMigration
+    public class GameCharacterVersionMigration : BaseMigration, IMigration
     {
         private readonly GameCharacterKeyMapper _gameCharacterKeyMapper;
         private readonly GameCharacterVersionKeyMapper _gameCharacterVersionKeyMapper;
@@ -28,7 +28,7 @@ namespace Migration.Migrations.GameData.Characters
             _gameRaceKeyMapper = gameRaceKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var guildCharacterVersions = SourceDbContext.GuildCharacterVersions.ToList();
 

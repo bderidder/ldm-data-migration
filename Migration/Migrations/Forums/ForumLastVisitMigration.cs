@@ -7,7 +7,7 @@ using Migration.KeyMappers.Identity;
 
 namespace Migration.Migrations.Forums
 {
-    public class ForumLastVisitMigration : BaseMigration
+    public class ForumLastVisitMigration : BaseMigration, IMigration
     {
         private readonly ForumLastVisitKeyMapper _forumLastVisitKeyMapper;
         private readonly UserKeyMapper _userKeyMapper;
@@ -22,7 +22,7 @@ namespace Migration.Migrations.Forums
             _userKeyMapper = userKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var forumLastVisits = SourceDbContext.ForumLastVisits.ToList();
 

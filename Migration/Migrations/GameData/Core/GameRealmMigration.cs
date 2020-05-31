@@ -6,7 +6,7 @@ using Migration.KeyMappers.GameData.Core;
 
 namespace Migration.Migrations.GameData.Core
 {
-    public class GameRealmMigration : BaseMigration
+    public class GameRealmMigration : BaseMigration, IMigration
     {
         private readonly GameRealmKeyMapper _gameRealmKeyMapper;
         
@@ -18,7 +18,7 @@ namespace Migration.Migrations.GameData.Core
             _gameRealmKeyMapper = gameRealmKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var realms = SourceDbContext.Realms.ToList();
 

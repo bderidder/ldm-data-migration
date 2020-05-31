@@ -6,7 +6,7 @@ using Migration.KeyMappers.GameData.Core;
 
 namespace Migration.Migrations.GameData.Core
 {
-    public class GameFactionMigration : BaseMigration
+    public class GameFactionMigration : BaseMigration, IMigration
     {
         private readonly GameFactionKeyMapper _gameFactionKeyMapper;
         
@@ -18,7 +18,7 @@ namespace Migration.Migrations.GameData.Core
             _gameFactionKeyMapper = gameFactionKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var gameFactions = SourceDbContext.GameFactions.ToList();
 

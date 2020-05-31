@@ -7,7 +7,7 @@ using Migration.KeyMappers.Identity;
 
 namespace Migration.Migrations.GameData.Sync.Profile
 {
-    public class ProfileSyncMigration : BaseMigration
+    public class ProfileSyncMigration : BaseMigration, IMigration
     {
         private readonly ProfileSyncKeyMapper _profileSyncKeyMapper;
         private readonly UserKeyMapper _userKeyMapper;
@@ -22,7 +22,7 @@ namespace Migration.Migrations.GameData.Sync.Profile
             _userKeyMapper = userKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var profileSyncs = SourceDbContext.ProfileSyncs.ToList();
 

@@ -5,9 +5,9 @@ using LaDanse.Target;
 using LaDanse.Target.Entities.Identity;
 using Migration.KeyMappers.Identity;
 
-namespace Migration.Migrations
+namespace Migration.Migrations.Identity
 {
-    public class UserMigration : BaseMigration
+    public class UserMigration : BaseMigration, IMigration
     {
         private readonly UserKeyMapper _userKeyMapper;
     
@@ -20,7 +20,7 @@ namespace Migration.Migrations
             _userKeyMapper = userKeyMapper;
         }
 
-        public override void Migrate()
+        public void Migrate()
         {
             var accounts = SourceDbContext.Accounts.ToList();
 

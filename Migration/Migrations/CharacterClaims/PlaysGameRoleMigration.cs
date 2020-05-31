@@ -7,7 +7,7 @@ using Migration.Migrations.GameData;
 
 namespace Migration.Migrations.CharacterClaims
 {
-    public class PlaysGameRoleMigration : BaseMigration
+    public class PlaysGameRoleMigration : BaseMigration, IMigration
     {
         private readonly GameCharacterClaimKeyMapper _gameCharacterClaimKeyMapper;
         private readonly PlaysGameRoleKeyMapper _playsGameRoleKeyMapper;
@@ -22,7 +22,7 @@ namespace Migration.Migrations.CharacterClaims
             _playsGameRoleKeyMapper = playsGameRoleKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var playsRoles = SourceDbContext.PlaysRoles.ToList();
 

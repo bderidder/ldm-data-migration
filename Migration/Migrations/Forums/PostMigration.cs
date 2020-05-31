@@ -7,7 +7,7 @@ using Migration.KeyMappers.Identity;
 
 namespace Migration.Migrations.Forums
 {
-    public class PostMigration : BaseMigration
+    public class PostMigration : BaseMigration, IMigration
     {
         private readonly PostKeyMapper _postKeyMapper;
         private readonly TopicKeyMapper _topicKeyMapper;
@@ -25,7 +25,7 @@ namespace Migration.Migrations.Forums
             _postKeyMapper = postKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var posts = SourceDbContext.Posts.ToList();
 

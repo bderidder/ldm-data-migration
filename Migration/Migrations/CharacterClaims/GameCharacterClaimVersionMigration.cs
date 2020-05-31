@@ -6,7 +6,7 @@ using Migration.KeyMappers.CharacterClaims;
 
 namespace Migration.Migrations.CharacterClaims
 {
-    public class GameCharacterClaimVersionMigration : BaseMigration
+    public class GameCharacterClaimVersionMigration : BaseMigration, IMigration
     {
         private readonly GameCharacterClaimKeyMapper _gameCharacterClaimKeyMapper;
         private readonly GameCharacterClaimVersionKeyMapper _gameCharacterClaimVersionKeyMapper;
@@ -21,7 +21,7 @@ namespace Migration.Migrations.CharacterClaims
             _gameCharacterClaimVersionKeyMapper = gameCharacterClaimVersionKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var characterClaimVersions = SourceDbContext.CharacterClaimVersions.ToList();
 

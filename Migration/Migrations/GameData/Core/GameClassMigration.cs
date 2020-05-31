@@ -6,7 +6,7 @@ using Migration.KeyMappers.GameData.Core;
 
 namespace Migration.Migrations.GameData.Characters
 {
-    public class GameClassMigration : BaseMigration
+    public class GameClassMigration : BaseMigration, IMigration
     {
         private readonly GameClassKeyMapper _gameClassKeyMapper;
         
@@ -18,7 +18,7 @@ namespace Migration.Migrations.GameData.Characters
             _gameClassKeyMapper = gameClassKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var gameClasses = SourceDbContext.GameClasses.ToList();
 

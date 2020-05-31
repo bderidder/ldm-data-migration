@@ -6,7 +6,7 @@ using Migration.KeyMappers.Comments;
 
 namespace Migration.Migrations.Comments
 {
-    public class CommentGroupMigration : BaseMigration
+    public class CommentGroupMigration : BaseMigration, IMigration
     {
         private readonly CommentGroupKeyMapper _commentGroupKeyMapper;
         
@@ -18,7 +18,7 @@ namespace Migration.Migrations.Comments
             _commentGroupKeyMapper = commentGroupKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var commentGroups = SourceDbContext.CommentGroups.ToList();
 

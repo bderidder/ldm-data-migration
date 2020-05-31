@@ -7,7 +7,7 @@ using Migration.KeyMappers.GameData.Core;
 
 namespace Migration.Migrations.GameData.Characters
 {
-    public class GameGuildMigration : BaseMigration
+    public class GameGuildMigration : BaseMigration, IMigration
     {
         private readonly GameGuildKeyMapper _gameGuildKeyMapper;
         private readonly GameRealmKeyMapper _gameRealmKeyMapper;
@@ -22,7 +22,7 @@ namespace Migration.Migrations.GameData.Characters
             _gameRealmKeyMapper = gameRealmKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var guilds = SourceDbContext.Guilds.ToList();
 

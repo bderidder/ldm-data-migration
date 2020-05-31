@@ -7,7 +7,7 @@ using Migration.KeyMappers.GameData.Core;
 
 namespace Migration.Migrations.GameData.Sync.Guild
 {
-    public class GameGuildSyncMigration : BaseMigration
+    public class GameGuildSyncMigration : BaseMigration, IMigration
     {
         private readonly GameGuildSyncKeyMapper _gameGuildSyncKeyMapper;
         private readonly GameGuildKeyMapper _gameGuildKeyMapper;
@@ -22,7 +22,7 @@ namespace Migration.Migrations.GameData.Sync.Guild
             _gameGuildKeyMapper = gameGuildKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var guildSyncs = SourceDbContext.GuildSyncs.ToList();
 

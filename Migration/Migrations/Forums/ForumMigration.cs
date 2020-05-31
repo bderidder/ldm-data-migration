@@ -8,7 +8,7 @@ using Migration.KeyMappers.Identity;
 
 namespace Migration.Migrations.Forums
 {
-    public class ForumMigration : BaseMigration,IProjectionsMigration
+    public class ForumMigration : BaseMigration, IMigration, IProjectionsMigration
     {
         private readonly ForumKeyMapper _forumKeyMapper;
         private readonly TopicKeyMapper _topicKeyMapper;
@@ -26,7 +26,7 @@ namespace Migration.Migrations.Forums
             _userKeyMapper = userKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var forums = SourceDbContext.Forums.ToList();
 

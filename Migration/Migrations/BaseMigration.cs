@@ -3,7 +3,7 @@ using LaDanse.Target;
 
 namespace Migration.Migrations
 {
-    public abstract class BaseMigration : IMigration
+    public abstract class BaseMigration
     {
         protected readonly SourceDbContext SourceDbContext;
         protected readonly TargetDbContext TargetDbContext;
@@ -13,7 +13,5 @@ namespace Migration.Migrations
             SourceDbContext = sourceDbContext;
             TargetDbContext = targetDbContext;
         }
-
-        public abstract void Migrate();
     }
 }

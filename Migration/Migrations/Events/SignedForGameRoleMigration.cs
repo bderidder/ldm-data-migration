@@ -7,7 +7,7 @@ using Migration.Migrations.GameData;
 
 namespace Migration.Migrations.Events
 {
-    public class SignedForGameRoleMigration : BaseMigration
+    public class SignedForGameRoleMigration : BaseMigration, IMigration
     {
         private readonly SignedForGameRoleKeyMapper _signedForGameRoleKeyMapper;
         private readonly SignUpKeyMapper _signUpKeyMapper;
@@ -22,7 +22,7 @@ namespace Migration.Migrations.Events
             _signUpKeyMapper = signUpKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var forRoles = SourceDbContext.ForRoles.ToList();
 

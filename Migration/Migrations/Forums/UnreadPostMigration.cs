@@ -7,7 +7,7 @@ using Migration.KeyMappers.Identity;
 
 namespace Migration.Migrations.Forums
 {
-    public class UnreadPostMigration : BaseMigration
+    public class UnreadPostMigration : BaseMigration, IMigration
     {
         private readonly UnreadPostKeyMapper _unreadPostKeyMapper;
         private readonly PostKeyMapper _postKeyMapper;
@@ -25,7 +25,7 @@ namespace Migration.Migrations.Forums
             _userKeyMapper = userKeyMapper;
         }
         
-        public override void Migrate()
+        public void Migrate()
         {
             var oldUnreadPosts = SourceDbContext.UnreadPosts.ToList();
 
