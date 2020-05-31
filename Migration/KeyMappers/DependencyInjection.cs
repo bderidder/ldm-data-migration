@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Migration.KeyMappers.CharacterClaims;
 using Migration.KeyMappers.Comments;
+using Migration.KeyMappers.Events;
 using Migration.KeyMappers.GameData.Characters;
 using Migration.KeyMappers.GameData.Core;
 using Migration.KeyMappers.GameData.Sync;
@@ -29,6 +30,10 @@ namespace Migration.KeyMappers
             #endregion
 
             #region Events
+            
+            services.AddScoped<EventKeyMapper>();
+            services.AddScoped<SignUpKeyMapper>();
+            services.AddScoped<SignedForGameRoleKeyMapper>();
 
             #endregion
 

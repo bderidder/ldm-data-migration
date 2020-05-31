@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Migration.Migrations.CharacterClaims;
 using Migration.Migrations.Comments;
+using Migration.Migrations.Events;
 using Migration.Migrations.GameData;
 using Migration.Migrations.GameData.Characters;
 using Migration.Migrations.GameData.Core;
@@ -37,6 +38,11 @@ namespace Migration.Migrations
             
             #region Events
 
+            services.AddScoped<AllEventsMigrations>();
+            services.AddScoped<EventMigration>();
+            services.AddScoped<SignUpMigration>();
+            services.AddScoped<SignedForGameRoleMigration>();
+            
             #endregion
 
             #region Forums
