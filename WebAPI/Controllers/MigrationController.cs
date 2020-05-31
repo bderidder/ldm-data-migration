@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LaDanse.Migration.Migrations;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Migration.Migrations;
 
 namespace WebAPI.Controllers
 {

@@ -1,4 +1,4 @@
-﻿namespace Migration.Migrations
+﻿namespace LaDanse.Migration.Migrations
 {
     public interface IProjectionsMigration
     {

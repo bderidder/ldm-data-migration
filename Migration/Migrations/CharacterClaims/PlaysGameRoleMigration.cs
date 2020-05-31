@@ -1,11 +1,11 @@
 using System.Linq;
+using LaDanse.Migration.KeyMappers.CharacterClaims;
+using LaDanse.Migration.Migrations.GameData;
 using LaDanse.Source;
 using LaDanse.Target;
 using LaDanse.Target.Entities.CharacterClaims;
-using Migration.KeyMappers.CharacterClaims;
-using Migration.Migrations.GameData;
 
-namespace Migration.Migrations.CharacterClaims
+namespace LaDanse.Migration.Migrations.CharacterClaims
 {
     public class PlaysGameRoleMigration : BaseMigration, IMigration
     {

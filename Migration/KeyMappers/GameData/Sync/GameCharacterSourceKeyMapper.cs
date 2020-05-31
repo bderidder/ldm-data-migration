@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Migration.KeyMappers.GameData.Sync
+namespace LaDanse.Migration.KeyMappers.GameData.Sync
 {
     public class GameCharacterSourceKeyMapper : GenericKeyMapper<string, Guid>
     {

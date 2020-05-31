@@ -1,11 +1,11 @@
 using System.Linq;
+using LaDanse.Migration.KeyMappers.Comments;
+using LaDanse.Migration.KeyMappers.Identity;
 using LaDanse.Source;
 using LaDanse.Target;
 using LaDanse.Target.Entities.Comments;
-using Migration.KeyMappers.Comments;
-using Migration.KeyMappers.Identity;
 
-namespace Migration.Migrations.Comments
+namespace LaDanse.Migration.Migrations.Comments
 {
     public class CommentMigration : BaseMigration, IMigration
     {

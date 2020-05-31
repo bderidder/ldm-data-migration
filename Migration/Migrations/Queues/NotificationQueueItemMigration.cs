@@ -1,12 +1,12 @@
 using System;
 using System.Linq;
+using LaDanse.Migration.KeyMappers.Identity;
+using LaDanse.Migration.KeyMappers.Queues;
 using LaDanse.Source;
 using LaDanse.Target;
 using LaDanse.Target.Entities.Queues;
-using Migration.KeyMappers.Identity;
-using Migration.KeyMappers.Queues;
 
-namespace Migration.Migrations.Queues
+namespace LaDanse.Migration.Migrations.Queues
 {
     public class NotificationQueueItemMigration : BaseMigration, IMigration
     {

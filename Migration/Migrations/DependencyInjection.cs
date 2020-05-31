@@ -1,20 +1,20 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Migration.Migrations.CharacterClaims;
-using Migration.Migrations.Comments;
-using Migration.Migrations.Events;
-using Migration.Migrations.Forums;
-using Migration.Migrations.GameData;
-using Migration.Migrations.GameData.Characters;
-using Migration.Migrations.GameData.Core;
-using Migration.Migrations.GameData.Sync;
-using Migration.Migrations.GameData.Sync.Guild;
-using Migration.Migrations.GameData.Sync.Profile;
-using Migration.Migrations.Identity;
-using Migration.Migrations.Queues;
-using Migration.Migrations.Settings;
-using Migration.Migrations.Telemetry;
+﻿using LaDanse.Migration.Migrations.CharacterClaims;
+using LaDanse.Migration.Migrations.Comments;
+using LaDanse.Migration.Migrations.Events;
+using LaDanse.Migration.Migrations.Forums;
+using LaDanse.Migration.Migrations.GameData;
+using LaDanse.Migration.Migrations.GameData.Characters;
+using LaDanse.Migration.Migrations.GameData.Core;
+using LaDanse.Migration.Migrations.GameData.Sync;
+using LaDanse.Migration.Migrations.GameData.Sync.Guild;
+using LaDanse.Migration.Migrations.GameData.Sync.Profile;
+using LaDanse.Migration.Migrations.Identity;
+using LaDanse.Migration.Migrations.Queues;
+using LaDanse.Migration.Migrations.Settings;
+using LaDanse.Migration.Migrations.Telemetry;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Migration.Migrations
+namespace LaDanse.Migration.Migrations
 {
     public static class DependencyInjection
     {

@@ -1,4 +1,4 @@
-namespace Migration.Migrations.GameData.Sync
+namespace LaDanse.Migration.Migrations.GameData.Sync
 {
     public class GameCharacterSourceMigration : IMigration
     {

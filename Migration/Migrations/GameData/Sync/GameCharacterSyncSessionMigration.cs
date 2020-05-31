@@ -1,10 +1,10 @@
 using System.Linq;
+using LaDanse.Migration.KeyMappers.GameData.Sync;
 using LaDanse.Source;
 using LaDanse.Target;
 using LaDanse.Target.Entities.GameData.Sync;
-using Migration.KeyMappers.GameData.Sync;
 
-namespace Migration.Migrations.GameData.Sync
+namespace LaDanse.Migration.Migrations.GameData.Sync
 {
     public class GameCharacterSyncSessionMigration : BaseMigration, IMigration
     {

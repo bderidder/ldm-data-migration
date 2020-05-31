@@ -1,7 +1,7 @@
-using Migration.Migrations.GameData.Sync.Guild;
-using Migration.Migrations.GameData.Sync.Profile;
+using LaDanse.Migration.Migrations.GameData.Sync.Guild;
+using LaDanse.Migration.Migrations.GameData.Sync.Profile;
 
-namespace Migration.Migrations.GameData.Sync
+namespace LaDanse.Migration.Migrations.GameData.Sync
 {
     public class AllSyncMigrations : IMigration
     {

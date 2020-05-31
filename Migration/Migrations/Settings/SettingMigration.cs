@@ -1,11 +1,11 @@
 using System.Linq;
+using LaDanse.Migration.KeyMappers.Identity;
+using LaDanse.Migration.KeyMappers.Settings;
 using LaDanse.Source;
 using LaDanse.Target;
 using LaDanse.Target.Entities.Settings;
-using Migration.KeyMappers.Identity;
-using Migration.KeyMappers.Settings;
 
-namespace Migration.Migrations.Settings
+namespace LaDanse.Migration.Migrations.Settings
 {
     public class SettingMigration : BaseMigration, IMigration
     {

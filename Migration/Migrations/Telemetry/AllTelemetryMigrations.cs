@@ -1,4 +1,4 @@
-﻿namespace Migration.Migrations.Telemetry
+﻿namespace LaDanse.Migration.Migrations.Telemetry
 {
     public class AllTelemetryMigrations : IMigration
     {

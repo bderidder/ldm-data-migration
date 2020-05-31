@@ -1,4 +1,4 @@
-﻿namespace Migration.Migrations.Identity
+﻿namespace LaDanse.Migration.Migrations.Identity
 {
     public class IdentityMigrations : IMigration
     {

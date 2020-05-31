@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Migration.KeyMappers.Forums
+namespace LaDanse.Migration.KeyMappers.Forums
 {
     public class PostKeyMapper : GenericKeyMapper<string, Guid>
     {

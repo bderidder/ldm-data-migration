@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Migration.KeyMappers.GameData.Core
+namespace LaDanse.Migration.KeyMappers.GameData.Core
 {
     public class GameRaceKeyMapper : GenericKeyMapper<string, Guid>
     {

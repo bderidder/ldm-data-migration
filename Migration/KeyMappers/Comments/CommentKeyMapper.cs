@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Migration.KeyMappers.Comments
+namespace LaDanse.Migration.KeyMappers.Comments
 {
     public class CommentKeyMapper : GenericKeyMapper<string, Guid>
     {

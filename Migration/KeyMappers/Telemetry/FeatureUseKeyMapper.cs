@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Migration.KeyMappers.Telemetry
+namespace LaDanse.Migration.KeyMappers.Telemetry
 {
     public class FeatureUseKeyMapper : GenericKeyMapper<int, Guid>
     {

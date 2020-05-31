@@ -1,4 +1,4 @@
-namespace Migration.Migrations.Comments
+namespace LaDanse.Migration.Migrations.Comments
 {
     public class AllCommentsMigration : IMigration
     {
