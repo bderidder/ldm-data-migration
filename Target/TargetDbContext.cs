@@ -83,14 +83,12 @@ namespace LaDanse.Target
 
         #endregion
 
-
         #region Queues
         
         public virtual DbSet<ActivityQueueItem> ActivityQueueItems { get; set; }
         public virtual DbSet<NotificationQueueItem> NotificationQueueItems { get; set; }
 
         #endregion
-
 
         #region Settings
         
@@ -99,8 +97,7 @@ namespace LaDanse.Target
         public virtual DbSet<FeatureToggle> FeatureToggles { get; set; }
 
         #endregion
-
-
+        
         #region Telemetry
         
         public virtual DbSet<Feedback> Feedbacks { get; set; }
