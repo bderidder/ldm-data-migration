@@ -38,6 +38,9 @@ namespace LaDanse.Target.Configurations.Identity
                 .HasColumnName("email")
                 .HasUtf8ColumnType(MySqlBuilderTypes.String(180));
 
+            builder.Property(e => e.DisplayNameByUser)
+                .IsRequired()
+                .HasColumnName("displayNameByUser");
         }
     }
 }

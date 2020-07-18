@@ -31,6 +31,7 @@ namespace LaDanse.Migration.Migrations.Identity
                     Id = _userKeyMapper.MapKey(account.Id), 
                     ExternalId = Guid.NewGuid().ToString(), 
                     DisplayName = account.DisplayName, 
+                    DisplayNameByUser = true,
                     Email = account.Email
                 };
 
