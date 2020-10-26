@@ -25,14 +25,14 @@ namespace WebAPI
         {
             services.AddDbContext<SourceDbContext>(options => options
                 .UseMySql(
-                    "server=localhost;port=3357;database=LDMDevelopment;user=root;password=sql;GuidFormat=None",
-                    x => x.ServerVersion("5.7.30-mysql")
+                    "server=192.168.1.13;port=3357;database=LDMDevelopment;user=root;password=sql;GuidFormat=None",
+                    x => x.ServerVersion("5.7.32-mysql")
                 ));
                 
             services.AddDbContext<TargetDbContext>(options => options
                 .UseMySql(
-                    "server=localhost;port=3380;database=LDMMigrationTest;user=root;password=sql",
-                    x => x.ServerVersion("8.0.20-mysql")
+                    "server=192.168.1.13;port=3380;database=LDMDevelopment;user=root;password=sql",
+                    x => x.ServerVersion("8.0.22-mysql")
                 ));
 
             services.AddKeyMappers();
