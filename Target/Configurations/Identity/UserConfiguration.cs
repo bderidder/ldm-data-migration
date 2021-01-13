@@ -10,10 +10,6 @@ namespace LaDanse.Target.Configurations.Identity
         {
             builder.ToTable("User");
 
-            builder.HasIndex(e => e.ExternalId)
-                .HasName("UNIQ_B28B6F38C05FB297")
-                .IsUnique();
-
             builder.HasIndex(e => e.DisplayName)
                 .HasName("UNIQ_B28B6F38A0D96FBF")
                 .IsUnique();
@@ -23,10 +19,6 @@ namespace LaDanse.Target.Configurations.Identity
                 .IsUnique();
 
             builder.HasGuidKey();
-            
-            builder.Property(e => e.ExternalId)
-                .HasColumnName("externalId")
-                .HasUtf8ColumnType(MySqlBuilderTypes.String(127));
 
             builder.Property(e => e.DisplayName)
                 .IsRequired()
@@ -38,9 +30,18 @@ namespace LaDanse.Target.Configurations.Identity
                 .HasColumnName("email")
                 .HasUtf8ColumnType(MySqlBuilderTypes.String(180));
 
-            builder.Property(e => e.DisplayNameByUser)
+            builder.Property(e => e.LastLogin)
+                .HasColumnName("lastLogin")
+                .HasColumnType(MySqlBuilderTypes.DateTime);
+
+            builder.Property(e => e.Salt)
+                .HasColumnName("salt")
+                .HasUtf8ColumnType(MySqlBuilderTypes.String(255));
+
+            builder.Property(e => e.Password)
                 .IsRequired()
-                .HasColumnName("displayNameByUser");
+                .HasColumnName("password")
+                .HasUtf8ColumnType(MySqlBuilderTypes.String(255));
         }
     }
 }

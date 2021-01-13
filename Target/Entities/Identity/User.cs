@@ -7,10 +7,11 @@ namespace LaDanse.Target.Entities.Identity
     {
         public Guid Id { get; set; }
         
-        public string ExternalId { get; set; }
         public string Email { get; set; }
         public string DisplayName { get; set; }
-        
-        public bool DisplayNameByUser { get; set; }
+        public DateTime? LastLogin { get; set; }
+
+        public string Salt { get; set; }
+        public string Password { get; set; }
     }
 }

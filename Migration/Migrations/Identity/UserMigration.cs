@@ -29,10 +29,11 @@ namespace LaDanse.Migration.Migrations.Identity
                 var user = new User
                 {
                     Id = _userKeyMapper.MapKey(account.Id), 
-                    ExternalId = Guid.NewGuid().ToString(), 
                     DisplayName = account.DisplayName, 
-                    DisplayNameByUser = true,
-                    Email = account.Email
+                    Email = account.Email,
+                    Salt = account.Salt,
+                    Password = account.Password,
+                    LastLogin = account.LastLogin
                 };
 
                 TargetDbContext.Users.Add(user);
