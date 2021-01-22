@@ -1,8 +1,10 @@
 using System.Linq;
 using LaDanse.Migration.KeyMappers.Comments;
 using LaDanse.Source;
+using LaDanse.Source.MySql;
 using LaDanse.Target;
 using LaDanse.Target.Entities.Comments;
+using Target.Shared;
 
 namespace LaDanse.Migration.Migrations.Comments
 {
@@ -11,7 +13,7 @@ namespace LaDanse.Migration.Migrations.Comments
         private readonly CommentGroupKeyMapper _commentGroupKeyMapper;
         
         public CommentGroupMigration(
-            SourceDbContext sourceDbContext, TargetDbContext targetDbContext, 
+            SourceDbContext sourceDbContext, ITargetDbContext targetDbContext, 
             CommentGroupKeyMapper commentGroupKeyMapper)
             : base(sourceDbContext, targetDbContext)
         {

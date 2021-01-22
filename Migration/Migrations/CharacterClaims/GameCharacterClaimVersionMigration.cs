@@ -1,8 +1,10 @@
 ﻿using System.Linq;
 using LaDanse.Migration.KeyMappers.CharacterClaims;
 using LaDanse.Source;
+using LaDanse.Source.MySql;
 using LaDanse.Target;
 using LaDanse.Target.Entities.CharacterClaims;
+using Target.Shared;
 
 namespace LaDanse.Migration.Migrations.CharacterClaims
 {
@@ -12,7 +14,7 @@ namespace LaDanse.Migration.Migrations.CharacterClaims
         private readonly GameCharacterClaimVersionKeyMapper _gameCharacterClaimVersionKeyMapper;
         
         public GameCharacterClaimVersionMigration(
-            SourceDbContext sourceDbContext, TargetDbContext targetDbContext,
+            SourceDbContext sourceDbContext, ITargetDbContext targetDbContext,
             GameCharacterClaimKeyMapper gameCharacterClaimKeyMapper,
             GameCharacterClaimVersionKeyMapper gameCharacterClaimVersionKeyMapper)
             : base(sourceDbContext, targetDbContext)

@@ -1,8 +1,10 @@
 using System.Linq;
 using LaDanse.Migration.KeyMappers.GameData.Sync;
 using LaDanse.Source;
+using LaDanse.Source.MySql;
 using LaDanse.Target;
 using LaDanse.Target.Entities.GameData.Sync;
+using Target.Shared;
 
 namespace LaDanse.Migration.Migrations.GameData.Sync
 {
@@ -12,7 +14,7 @@ namespace LaDanse.Migration.Migrations.GameData.Sync
         private readonly GameCharacterSourceKeyMapper _gameCharacterSourceKeyMapper;
         
         public GameCharacterSyncSessionMigration(
-            SourceDbContext sourceDbContext, TargetDbContext targetDbContext, 
+            SourceDbContext sourceDbContext, ITargetDbContext targetDbContext, 
             GameCharacterSyncSessionKeyMapper gameCharacterSyncSessionKeyMapper, 
             GameCharacterSourceKeyMapper gameCharacterSourceKeyMapper)
             : base(sourceDbContext, targetDbContext)
@@ -30,7 +32,10 @@ namespace LaDanse.Migration.Migrations.GameData.Sync
                 var newEntity = new GameCharacterSyncSession()
                 {
                     Id = _gameCharacterSyncSessionKeyMapper.MapKey(characterSyncSession.Id),
-                    GameCharacterSourceId = _gameCharacterSourceKeyMapper.MapKey(characterSyncSession.CharacterSourceId)
+                    GameCharacterSourceId = _gameCharacterSourceKeyMapper.MapKey(characterSyncSession.CharacterSourceId),
+                    FromTime = characterSyncSession.FromTime,
+                    EndTime = characterSyncSession.EndTime,
+                    Log = characterSyncSession.Log
                 };
 
                 TargetDbContext.GameCharacterSyncSessions.Add(newEntity);

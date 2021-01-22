@@ -2,8 +2,10 @@ using System.Linq;
 using LaDanse.Migration.KeyMappers.Events;
 using LaDanse.Migration.KeyMappers.Identity;
 using LaDanse.Source;
+using LaDanse.Source.MySql;
 using LaDanse.Target;
 using LaDanse.Target.Entities.Events;
+using Target.Shared;
 
 namespace LaDanse.Migration.Migrations.Events
 {
@@ -14,7 +16,7 @@ namespace LaDanse.Migration.Migrations.Events
         private readonly UserKeyMapper _userKeyMapper;
         
         public SignUpMigration(
-            SourceDbContext sourceDbContext, TargetDbContext targetDbContext, 
+            SourceDbContext sourceDbContext, ITargetDbContext targetDbContext, 
             SignUpKeyMapper signUpKeyMapper, 
             EventKeyMapper eventKeyMapper, 
             UserKeyMapper userKeyMapper)

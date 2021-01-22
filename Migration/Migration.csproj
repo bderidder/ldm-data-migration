@@ -6,8 +6,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Source\Source.csproj" />
-      <ProjectReference Include="..\Target\Target.csproj" />
+      <ProjectReference Include="..\Models.Source\Models.Source.csproj" />
+      <ProjectReference Include="..\Models.Target\Models.Target.csproj" />
+      <ProjectReference Include="..\Source.MySQL\Source.MySQL.csproj" />
+      <ProjectReference Include="..\Target.Shared\Target.Shared.csproj" />
     </ItemGroup>
 
 </Project>

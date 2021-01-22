@@ -1,14 +1,14 @@
-﻿using LaDanse.Source;
-using LaDanse.Target;
+﻿using LaDanse.Source.MySql;
+using Target.Shared;
 
 namespace LaDanse.Migration.Migrations
 {
     public abstract class BaseMigration
     {
         protected readonly SourceDbContext SourceDbContext;
-        protected readonly TargetDbContext TargetDbContext;
+        protected readonly ITargetDbContext TargetDbContext;
 
-        protected BaseMigration(SourceDbContext sourceDbContext, TargetDbContext targetDbContext)
+        protected BaseMigration(SourceDbContext sourceDbContext, ITargetDbContext targetDbContext)
         {
             SourceDbContext = sourceDbContext;
             TargetDbContext = targetDbContext;

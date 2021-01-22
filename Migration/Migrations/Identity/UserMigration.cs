@@ -2,8 +2,10 @@
 using System.Linq;
 using LaDanse.Migration.KeyMappers.Identity;
 using LaDanse.Source;
+using LaDanse.Source.MySql;
 using LaDanse.Target;
 using LaDanse.Target.Entities.Identity;
+using Target.Shared;
 
 namespace LaDanse.Migration.Migrations.Identity
 {
@@ -13,7 +15,7 @@ namespace LaDanse.Migration.Migrations.Identity
     
         public UserMigration(
             SourceDbContext sourceDbContext, 
-            TargetDbContext targetDbContext,
+            ITargetDbContext targetDbContext,
             UserKeyMapper userKeyMapper)
             :base(sourceDbContext, targetDbContext)
         {

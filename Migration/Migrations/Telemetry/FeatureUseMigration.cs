@@ -3,8 +3,10 @@ using System.Linq;
 using LaDanse.Migration.KeyMappers.Identity;
 using LaDanse.Migration.KeyMappers.Telemetry;
 using LaDanse.Source;
+using LaDanse.Source.MySql;
 using LaDanse.Target;
 using LaDanse.Target.Entities.Telemetry;
+using Target.Shared;
 
 namespace LaDanse.Migration.Migrations.Telemetry
 {
@@ -15,7 +17,7 @@ namespace LaDanse.Migration.Migrations.Telemetry
     
         public FeatureUseMigration(
             SourceDbContext sourceDbContext, 
-            TargetDbContext targetDbContext,
+            ITargetDbContext targetDbContext,
             UserKeyMapper userKeyMapper, 
             FeatureUseKeyMapper featureUseKeyMapper)
             :base(sourceDbContext, targetDbContext)

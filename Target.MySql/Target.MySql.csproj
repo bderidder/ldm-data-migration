@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <RootNamespace>LaDanse.Target.MySql</RootNamespace>
+        <AssemblyName>LaDanse.Target.MySql</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.2" />
+        <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.0-alpha.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Models.Target\Models.Target.csproj" />
+      <ProjectReference Include="..\Target.Shared\Target.Shared.csproj" />
+    </ItemGroup>
+
+</Project>

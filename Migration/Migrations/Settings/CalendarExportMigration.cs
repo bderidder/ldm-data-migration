@@ -2,8 +2,10 @@ using System.Linq;
 using LaDanse.Migration.KeyMappers.Identity;
 using LaDanse.Migration.KeyMappers.Settings;
 using LaDanse.Source;
+using LaDanse.Source.MySql;
 using LaDanse.Target;
 using LaDanse.Target.Entities.Settings;
+using Target.Shared;
 
 namespace LaDanse.Migration.Migrations.Settings
 {
@@ -13,7 +15,7 @@ namespace LaDanse.Migration.Migrations.Settings
         private readonly UserKeyMapper _userKeyMapper;
         
         public CalendarExportMigration(
-            SourceDbContext sourceDbContext, TargetDbContext targetDbContext, 
+            SourceDbContext sourceDbContext, ITargetDbContext targetDbContext, 
             UserKeyMapper userKeyMapper, 
             CalendarExportKeyMapper calendarExportKeyMapper)
             : base(sourceDbContext, targetDbContext)

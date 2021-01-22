@@ -3,9 +3,11 @@ using LaDanse.Migration.KeyMappers.CharacterClaims;
 using LaDanse.Migration.KeyMappers.GameData.Characters;
 using LaDanse.Migration.KeyMappers.Identity;
 using LaDanse.Source;
+using LaDanse.Source.MySql;
 using LaDanse.Target;
 using LaDanse.Target.Entities.CharacterClaims;
 using Microsoft.Extensions.Logging;
+using Target.Shared;
 
 namespace LaDanse.Migration.Migrations.CharacterClaims
 {
@@ -16,7 +18,7 @@ namespace LaDanse.Migration.Migrations.CharacterClaims
         private readonly GameCharacterClaimKeyMapper _gameCharacterClaimKeyMapper;
         
         public GameCharacterClaimMigration(
-            SourceDbContext sourceDbContext, TargetDbContext targetDbContext,
+            SourceDbContext sourceDbContext, ITargetDbContext targetDbContext,
             UserKeyMapper userKeyMapper,
             GameCharacterKeyMapper gameCharacterKeyMapper,
             GameCharacterClaimKeyMapper gameCharacterClaimKeyMapper)

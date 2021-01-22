@@ -2,8 +2,10 @@ using System.Linq;
 using LaDanse.Migration.KeyMappers.CharacterClaims;
 using LaDanse.Migration.Migrations.GameData;
 using LaDanse.Source;
+using LaDanse.Source.MySql;
 using LaDanse.Target;
 using LaDanse.Target.Entities.CharacterClaims;
+using Target.Shared;
 
 namespace LaDanse.Migration.Migrations.CharacterClaims
 {
@@ -13,7 +15,7 @@ namespace LaDanse.Migration.Migrations.CharacterClaims
         private readonly PlaysGameRoleKeyMapper _playsGameRoleKeyMapper;
         
         public PlaysGameRoleMigration(
-            SourceDbContext sourceDbContext, TargetDbContext targetDbContext,
+            SourceDbContext sourceDbContext, ITargetDbContext targetDbContext,
             GameCharacterClaimKeyMapper gameCharacterClaimKeyMapper,
             PlaysGameRoleKeyMapper playsGameRoleKeyMapper)
             : base(sourceDbContext, targetDbContext)

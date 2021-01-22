@@ -1,8 +1,10 @@
 using System.Linq;
 using LaDanse.Migration.KeyMappers.GameData.Characters;
 using LaDanse.Source;
+using LaDanse.Source.MySql;
 using LaDanse.Target;
 using LaDanse.Target.Entities.GameData.Characters;
+using Target.Shared;
 
 namespace LaDanse.Migration.Migrations.GameData.Characters
 {
@@ -13,7 +15,7 @@ namespace LaDanse.Migration.Migrations.GameData.Characters
         private readonly GameGuildKeyMapper _gameGuildKeyMapper;
         
         public InGameGuildMigration(
-            SourceDbContext sourceDbContext, TargetDbContext targetDbContext, 
+            SourceDbContext sourceDbContext, ITargetDbContext targetDbContext, 
             InGameGuildKeyMapper inGameGuildKeyMapper, 
             GameCharacterKeyMapper gameCharacterKeyMapper, 
             GameGuildKeyMapper gameGuildKeyMapper)

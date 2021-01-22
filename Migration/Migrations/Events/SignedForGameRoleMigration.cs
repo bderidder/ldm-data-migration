@@ -2,8 +2,10 @@ using System.Linq;
 using LaDanse.Migration.KeyMappers.Events;
 using LaDanse.Migration.Migrations.GameData;
 using LaDanse.Source;
+using LaDanse.Source.MySql;
 using LaDanse.Target;
 using LaDanse.Target.Entities.Events;
+using Target.Shared;
 
 namespace LaDanse.Migration.Migrations.Events
 {
@@ -13,7 +15,7 @@ namespace LaDanse.Migration.Migrations.Events
         private readonly SignUpKeyMapper _signUpKeyMapper;
         
         public SignedForGameRoleMigration(
-            SourceDbContext sourceDbContext, TargetDbContext targetDbContext, 
+            SourceDbContext sourceDbContext, ITargetDbContext targetDbContext, 
             SignedForGameRoleKeyMapper signedForGameRoleKeyMapper, 
             SignUpKeyMapper signUpKeyMapper)
             : base(sourceDbContext, targetDbContext)

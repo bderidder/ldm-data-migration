@@ -1,8 +1,10 @@
 using System.Linq;
 using LaDanse.Migration.KeyMappers.GameData.Core;
 using LaDanse.Source;
+using LaDanse.Source.MySql;
 using LaDanse.Target;
 using LaDanse.Target.Entities.GameData.Core;
+using Target.Shared;
 
 namespace LaDanse.Migration.Migrations.GameData.Core
 {
@@ -11,7 +13,7 @@ namespace LaDanse.Migration.Migrations.GameData.Core
         private readonly GameRealmKeyMapper _gameRealmKeyMapper;
         
         public GameRealmMigration(
-            SourceDbContext sourceDbContext, TargetDbContext targetDbContext,
+            SourceDbContext sourceDbContext, ITargetDbContext targetDbContext,
             GameRealmKeyMapper gameRealmKeyMapper)
             : base(sourceDbContext, targetDbContext)
         {

@@ -2,8 +2,10 @@
 using LaDanse.Migration.KeyMappers.Identity;
 using LaDanse.Migration.KeyMappers.Telemetry;
 using LaDanse.Source;
+using LaDanse.Source.MySql;
 using LaDanse.Target;
 using LaDanse.Target.Entities.Telemetry;
+using Target.Shared;
 
 namespace LaDanse.Migration.Migrations.Telemetry
 {
@@ -14,7 +16,7 @@ namespace LaDanse.Migration.Migrations.Telemetry
     
         public FeedbackMigration(
             SourceDbContext sourceDbContext, 
-            TargetDbContext targetDbContext,
+            ITargetDbContext targetDbContext,
             UserKeyMapper userKeyMapper,
             FeedbackKeyMapper feedbackKeyMapper)
             :base(sourceDbContext, targetDbContext)

@@ -3,8 +3,10 @@ using System.Linq;
 using LaDanse.Migration.KeyMappers.Identity;
 using LaDanse.Migration.KeyMappers.Queues;
 using LaDanse.Source;
+using LaDanse.Source.MySql;
 using LaDanse.Target;
 using LaDanse.Target.Entities.Queues;
+using Target.Shared;
 
 namespace LaDanse.Migration.Migrations.Queues
 {
@@ -14,7 +16,7 @@ namespace LaDanse.Migration.Migrations.Queues
         private readonly UserKeyMapper _userKeyMapper;
         
         public NotificationQueueItemMigration(
-            SourceDbContext sourceDbContext, TargetDbContext targetDbContext,
+            SourceDbContext sourceDbContext, ITargetDbContext targetDbContext,
             UserKeyMapper userKeyMapper, 
             NotificationQueueItemKeyMapper notificationQueueItemKeyMapper)
             : base(sourceDbContext, targetDbContext)

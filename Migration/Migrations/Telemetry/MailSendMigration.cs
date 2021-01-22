@@ -1,8 +1,10 @@
 ﻿using System.Linq;
 using LaDanse.Migration.KeyMappers.Telemetry;
 using LaDanse.Source;
+using LaDanse.Source.MySql;
 using LaDanse.Target;
 using LaDanse.Target.Entities.Telemetry;
+using Target.Shared;
 
 namespace LaDanse.Migration.Migrations.Telemetry
 {
@@ -11,7 +13,7 @@ namespace LaDanse.Migration.Migrations.Telemetry
         private readonly MailSendKeyMapper _mailSendKeyMapper;
     
         public MailSendMigration(
-            SourceDbContext sourceDbContext, TargetDbContext targetDbContext,
+            SourceDbContext sourceDbContext, ITargetDbContext targetDbContext,
             MailSendKeyMapper mailSendKeyMapper)
             :base(sourceDbContext, targetDbContext)
         {

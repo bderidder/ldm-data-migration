@@ -2,8 +2,10 @@ using System.Linq;
 using LaDanse.Migration.KeyMappers.Forums;
 using LaDanse.Migration.KeyMappers.Identity;
 using LaDanse.Source;
+using LaDanse.Source.MySql;
 using LaDanse.Target;
 using LaDanse.Target.Entities.Forums;
+using Target.Shared;
 
 namespace LaDanse.Migration.Migrations.Forums
 {
@@ -14,7 +16,7 @@ namespace LaDanse.Migration.Migrations.Forums
         private readonly UserKeyMapper _userKeyMapper;
         
         public UnreadPostMigration(
-            SourceDbContext sourceDbContext, TargetDbContext targetDbContext, 
+            SourceDbContext sourceDbContext, ITargetDbContext targetDbContext, 
             UnreadPostKeyMapper unreadPostKeyMapper, 
             PostKeyMapper postKeyMapper, 
             UserKeyMapper userKeyMapper)

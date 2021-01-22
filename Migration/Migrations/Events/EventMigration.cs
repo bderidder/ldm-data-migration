@@ -3,8 +3,10 @@ using LaDanse.Migration.KeyMappers.Comments;
 using LaDanse.Migration.KeyMappers.Events;
 using LaDanse.Migration.KeyMappers.Identity;
 using LaDanse.Source;
+using LaDanse.Source.MySql;
 using LaDanse.Target;
 using LaDanse.Target.Entities.Events;
+using Target.Shared;
 
 namespace LaDanse.Migration.Migrations.Events
 {
@@ -15,7 +17,7 @@ namespace LaDanse.Migration.Migrations.Events
         private readonly UserKeyMapper _userKeyMapper;
         
         public EventMigration(
-            SourceDbContext sourceDbContext, TargetDbContext targetDbContext, 
+            SourceDbContext sourceDbContext, ITargetDbContext targetDbContext, 
             EventKeyMapper eventKeyMapper, 
             CommentGroupKeyMapper commentGroupKeyMapper, 
             UserKeyMapper userKeyMapper)
@@ -42,7 +44,8 @@ namespace LaDanse.Migration.Migrations.Events
                     Description = oldEvent.Description,
                     State = StringToEventState.Convert(oldEvent.State),
                     CommentGroupId = _commentGroupKeyMapper.MapKey(oldEvent.CommentGroupId), 
-                    OrganiserId = _userKeyMapper.MapKey(oldEvent.OrganiserId)
+                    OrganiserId = _userKeyMapper.MapKey(oldEvent.OrganiserId),
+                    LastModifiedTime = oldEvent.LastModifiedTime
                 };
 
                 TargetDbContext.Events.Add(newEntity);
