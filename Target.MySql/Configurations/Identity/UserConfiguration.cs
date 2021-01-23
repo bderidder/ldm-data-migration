@@ -14,7 +14,7 @@ namespace LaDanse.Target.MySql.Configurations.Identity
                 .HasDatabaseName("UNIQ_B28B6F38A0D96FBF")
                 .IsUnique();
 
-            builder.HasIndex(e => e.Email)
+            builder.HasIndex(e => e.NormalizedEmail)
                 .HasDatabaseName("UNIQ_B28B6F3892FC23A8")
                 .IsUnique();
 
@@ -28,20 +28,73 @@ namespace LaDanse.Target.MySql.Configurations.Identity
             builder.Property(e => e.Email)
                 .IsRequired()
                 .HasColumnName("email")
-                .HasUtf8ColumnType(MySqlBuilderTypes.String(180));
+                .HasUtf8ColumnType(MySqlBuilderTypes.String(255));
+            
+            builder.Property(e => e.NormalizedEmail)
+                .IsRequired()
+                .HasColumnName("normalizedEmail")
+                .HasUtf8ColumnType(MySqlBuilderTypes.String(255));
 
             builder.Property(e => e.LastLogin)
                 .HasColumnName("lastLogin")
                 .HasColumnType(MySqlBuilderTypes.DateTime);
 
-            builder.Property(e => e.Salt)
-                .HasColumnName("salt")
+            builder.Property(e => e.PasswordSalt)
+                .HasColumnName("passwordSalt")
                 .HasUtf8ColumnType(MySqlBuilderTypes.String(255));
 
-            builder.Property(e => e.Password)
+            builder.Property(e => e.PasswordHash)
                 .IsRequired()
-                .HasColumnName("password")
+                .HasColumnName("passwordHash")
+                .HasUtf8ColumnType(MySqlBuilderTypes.String(2048));
+            
+            builder.Property(e => e.UserName)
+                .HasColumnName("userName")
+                .HasUtf8ColumnType(MySqlBuilderTypes.String(40));
+            
+            builder.Property(e => e.NormalizedUserName)
+                .HasColumnName("normalizedUserName")
+                .HasUtf8ColumnType(MySqlBuilderTypes.String(40));
+
+            builder.Property(e => e.EmailConfirmed)
+                .HasColumnName("emailConfirmed")
+                .HasColumnType(MySqlBuilderTypes.Boolean);
+            
+            builder.Property(e => e.SecurityStamp)
+                .HasColumnName("securityStamp")
+                .HasUtf8ColumnType(MySqlBuilderTypes.String(2048));
+            
+            builder.Property(e => e.ConcurrencyStamp)
+                .HasColumnName("concurrencyStamp")
+                .HasUtf8ColumnType(MySqlBuilderTypes.String(2048));
+            
+            builder.Property(e => e.PhoneNumber)
+                .HasColumnName("phoneNumber")
                 .HasUtf8ColumnType(MySqlBuilderTypes.String(255));
+            
+            builder.Property(e => e.PhoneNumberConfirmed)
+                .IsRequired()
+                .HasColumnName("phoneNumberConfirmed")
+                .HasColumnType(MySqlBuilderTypes.Boolean);
+            
+            builder.Property(e => e.TwoFactorEnabled)
+                .IsRequired()
+                .HasColumnName("twoFactorEnabled")
+                .HasColumnType(MySqlBuilderTypes.Boolean);
+            
+            builder.Property(e => e.LockoutEnd)
+                .HasColumnName("lockoutEnd")
+                .HasColumnType(MySqlBuilderTypes.DateTime);
+            
+            builder.Property(e => e.LockoutEnabled)
+                .IsRequired()
+                .HasColumnName("lockoutEnabled")
+                .HasColumnType(MySqlBuilderTypes.Boolean);
+            
+            builder.Property(e => e.AccessFailedCount)
+                .IsRequired()
+                .HasColumnName("accessFailedCount")
+                .HasColumnType(MySqlBuilderTypes.UnsignedInt);
         }
     }
 }

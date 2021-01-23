@@ -1,8 +1,6 @@
 using System.Linq;
 using LaDanse.Migration.KeyMappers.GameData.Sync;
-using LaDanse.Source;
 using LaDanse.Source.MySql;
-using LaDanse.Target;
 using LaDanse.Target.Entities.GameData.Sync;
 using Target.Shared;
 

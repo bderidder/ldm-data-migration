@@ -1,9 +1,6 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using LaDanse.Migration.KeyMappers.Identity;
-using LaDanse.Source;
 using LaDanse.Source.MySql;
-using LaDanse.Target;
 using LaDanse.Target.Entities.Identity;
 using Target.Shared;
 
@@ -32,10 +29,22 @@ namespace LaDanse.Migration.Migrations.Identity
                 {
                     Id = _userKeyMapper.MapKey(account.Id), 
                     DisplayName = account.DisplayName, 
+                    UserName = account.Username,
+                    NormalizedUserName = account.UsernameCanonical,
                     Email = account.Email,
-                    Salt = account.Salt,
-                    Password = account.Password,
-                    LastLogin = account.LastLogin
+                    NormalizedEmail = account.EmailCanonical,
+                    EmailConfirmed = true,
+                    PasswordSalt = account.Salt,
+                    PasswordHash = account.Password,
+                    LastLogin = account.LastLogin,
+                    SecurityStamp = null,
+                    ConcurrencyStamp = null,
+                    PhoneNumber = null,
+                    PhoneNumberConfirmed = false,
+                    TwoFactorEnabled = false,
+                    LockoutEnd = null,
+                    LockoutEnabled = false,
+                    AccessFailedCount = 0
                 };
 
                 TargetDbContext.Users.Add(user);

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LaDanse.Source.Entities.GameData.Sync
+﻿namespace LaDanse.Source.Entities.GameData.Sync
 {
     public partial class CharacterSource
     {

@@ -1,9 +1,7 @@
 using System.Linq;
 using LaDanse.Migration.KeyMappers.GameData.Characters;
 using LaDanse.Migration.KeyMappers.GameData.Core;
-using LaDanse.Source;
 using LaDanse.Source.MySql;
-using LaDanse.Target;
 using LaDanse.Target.Entities.GameData.Characters;
 using Target.Shared;
 

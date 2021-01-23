@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LaDanse.Source.Entities.GameData.Sync.Guild
+﻿namespace LaDanse.Source.Entities.GameData.Sync.Guild
 {
     public partial class GuildSync
     {

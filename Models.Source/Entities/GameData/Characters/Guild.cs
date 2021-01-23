@@ -1,5 +1,4 @@
-﻿using System;
-using LaDanse.Source.Entities.GameData.Core;
+﻿using LaDanse.Source.Entities.GameData.Core;
 
 namespace LaDanse.Source.Entities.GameData.Characters
 {

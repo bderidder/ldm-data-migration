@@ -1,9 +1,7 @@
 using System.Linq;
 using LaDanse.Migration.KeyMappers.GameData.Characters;
 using LaDanse.Migration.KeyMappers.GameData.Core;
-using LaDanse.Source;
 using LaDanse.Source.MySql;
-using LaDanse.Target;
 using LaDanse.Target.Entities.GameData.Characters;
 using Target.Shared;
 
@@ -35,7 +33,8 @@ namespace LaDanse.Migration.Migrations.GameData.Characters
                     Id = _gameGuildKeyMapper.MapKey(guild.Id), 
                     Name = guild.Name, 
                     GameId = guild.GameId, 
-                    GameRealmId = _gameRealmKeyMapper.MapKey(guild.RealmId)
+                    GameRealmId = _gameRealmKeyMapper.MapKey(guild.RealmId),
+                    GameSlug = guild.Name.ToLower().Replace(" ", "-")
                 };
 
                 TargetDbContext.GameGuilds.Add(newGuild);

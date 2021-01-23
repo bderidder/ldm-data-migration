@@ -16,6 +16,11 @@ namespace Target.SqlServer.Configurations.GameData.Core
                 .IsRequired()
                 .HasColumnName("gameId")
                 .HasColumnType(SqlServerBuilderTypes.UnsignedInt);
+            
+            builder.Property(e => e.GameSlug)
+                .IsRequired()
+                .HasColumnName("gameSlug")
+                .HasUtf8ColumnType(SqlServerBuilderTypes.String(100));
 
             builder.Property(e => e.Name)
                 .IsRequired()

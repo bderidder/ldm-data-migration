@@ -19,6 +19,11 @@ namespace LaDanse.Target.MySql.Configurations.GameData.Characters
                 .IsRequired()
                 .HasColumnName("gameId")
                 .HasColumnType(MySqlBuilderTypes.UnsignedInt);
+            
+            builder.Property(e => e.GameSlug)
+                .IsRequired()
+                .HasColumnName("gameSlug")
+                .HasUtf8ColumnType(MySqlBuilderTypes.String(100));
 
             builder.Property(e => e.Name)
                 .IsRequired()

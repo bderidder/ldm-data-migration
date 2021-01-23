@@ -1,8 +1,6 @@
 using System.Linq;
 using LaDanse.Migration.KeyMappers.GameData.Core;
-using LaDanse.Source;
 using LaDanse.Source.MySql;
-using LaDanse.Target;
 using LaDanse.Target.Entities.GameData.Core;
 using Target.Shared;
 
@@ -30,7 +28,8 @@ namespace LaDanse.Migration.Migrations.GameData.Core
                 {
                     Id = _gameRealmKeyMapper.MapKey(realm.Id), 
                     Name = realm.Name, 
-                    GameId = realm.GameId
+                    GameId = realm.GameId,
+                    GameSlug = realm.Name.ToLower().Replace(" ", "-")
                 };
 
                 TargetDbContext.GameRealms.Add(newEntity);

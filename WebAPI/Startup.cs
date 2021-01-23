@@ -1,9 +1,7 @@
 using System;
 using LaDanse.Migration.KeyMappers;
 using LaDanse.Migration.Migrations;
-using LaDanse.Source;
 using LaDanse.Source.MySql;
-using LaDanse.Target;
 using LaDanse.Target.MySql;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -45,14 +43,14 @@ namespace WebAPI
                         .CharSetBehavior(CharSetBehavior.NeverAppend)
                 ));
 
-            DbTarget = DbTarget.SqlServer;
+            DbTarget = DbTarget.MySql;
 
             switch (DbTarget)
             {
                 case DbTarget.MySql:
                     services.AddDbContext<MySqlTargetDbContext>(options => options
                         .UseMySql(
-                            "server=192.168.1.13;port=3380;database=LDMDevelopment;user=root;password=sql",
+                            "server=192.168.1.13;port=3380;database=LDMDevelopmentRazor;user=root;password=sql",
                             new MySqlServerVersion(new Version(8, 0, 22)),
                             mySqlOptions => mySqlOptions
                                 .CharSetBehavior(CharSetBehavior.NeverAppend)

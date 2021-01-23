@@ -1,17 +1,14 @@
 ﻿using System;
 using LaDanse.Target.Entities.Shared;
+using Microsoft.AspNetCore.Identity;
 
 namespace LaDanse.Target.Entities.Identity
 {
-    public partial class User : IBaseEntity<Guid>
+    public partial class User : IdentityUser<Guid>, IBaseEntity<Guid>
     {
-        public Guid Id { get; set; }
-        
-        public string Email { get; set; }
         public string DisplayName { get; set; }
         public DateTime? LastLogin { get; set; }
 
-        public string Salt { get; set; }
-        public string Password { get; set; }
+        public string PasswordSalt { get; set; }
     }
 }

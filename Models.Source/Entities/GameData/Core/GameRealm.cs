@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LaDanse.Source.Entities.GameData.Core
+﻿namespace LaDanse.Source.Entities.GameData.Core
 {
     public partial class GameRealm
     {

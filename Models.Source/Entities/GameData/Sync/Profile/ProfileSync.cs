@@ -1,5 +1,4 @@
-﻿using System;
-using LaDanse.Source.Entities.Identity;
+﻿using LaDanse.Source.Entities.Identity;
 
 namespace LaDanse.Source.Entities.GameData.Sync.Profile
 {

@@ -2,9 +2,7 @@ using System.Linq;
 using LaDanse.Migration.KeyMappers.Comments;
 using LaDanse.Migration.KeyMappers.Events;
 using LaDanse.Migration.KeyMappers.Identity;
-using LaDanse.Source;
 using LaDanse.Source.MySql;
-using LaDanse.Target;
 using LaDanse.Target.Entities.Events;
 using Target.Shared;
 

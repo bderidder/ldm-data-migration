@@ -2,9 +2,7 @@
 using System.Linq;
 using LaDanse.Migration.KeyMappers.Identity;
 using LaDanse.Migration.KeyMappers.Telemetry;
-using LaDanse.Source;
 using LaDanse.Source.MySql;
-using LaDanse.Target;
 using LaDanse.Target.Entities.Telemetry;
 using Target.Shared;
 
