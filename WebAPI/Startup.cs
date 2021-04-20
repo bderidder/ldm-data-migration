@@ -50,7 +50,7 @@ namespace WebAPI
                 case DbTarget.MySql:
                     services.AddDbContext<MySqlTargetDbContext>(options => options
                         .UseMySql(
-                            "server=192.168.1.13;port=3380;database=LDMDevelopmentRazor;user=root;password=sql",
+                            "server=192.168.1.13;port=3380;database=LDMDevelopmentDotNet;user=root;password=sql",
                             new MySqlServerVersion(new Version(8, 0, 22)),
                             mySqlOptions => mySqlOptions
                                 .CharSetBehavior(CharSetBehavior.NeverAppend)
