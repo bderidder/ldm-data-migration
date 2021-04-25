@@ -43,7 +43,7 @@ namespace WebAPI
                         .CharSetBehavior(CharSetBehavior.NeverAppend)
                 ));
 
-            DbTarget = DbTarget.MySql;
+            DbTarget = DbTarget.SqlServer;
 
             switch (DbTarget)
             {
@@ -61,7 +61,7 @@ namespace WebAPI
                 case DbTarget.SqlServer:
                     services.AddDbContext<SqlServerTargetDbContext>(options =>
                         options.UseSqlServer(
-                            "Server=(LocalDB)\MSSQLLocalDB;Integrated Security=true;AttachDbFileName=D:\Data\MyDB1.mdf"
+                            "Server=(localdb)\\mssqllocaldb;Database=LaDanseDb;Trusted_Connection=True;MultipleActiveResultSets=true"
                             // "Server=tcp:192.168.1.13,1433;Initial Catalog=LDMMigrationTest;Persist Security Info=False;User ID=sa;Password=BC8.27tX;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;"
                         ));
                 
